@@ -1,17 +1,110 @@
-async function test(){
-    
+let a_snippet_of_data_example = 
+{
+  år: "2024",
+  id: "0114",
+  valuesForMinst1Dos: [
+    {
+      åldersGrupp: "18-49",
+      value: 75.0
+    },
+    {
+      åldersGrupp: "50-64",
+      value: 88.5
+    },
+    {
+      åldersGrupp: "65-79",
+      value: 93.2
+    }
 
-    let postBody = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dataRequest),
-      };
+  ],
+  valuesForAktuellPåfyllnadsdos: [
+    {
+      åldersGrupp: "18-49",
+      value: 2.5
+    },
+    {
+      åldersGrupp: "50-64",
+      value: 13.2
+    },
+    {
+      åldersGrupp: "65-79",
+      value: 58.9
+    }
 
-    let data = await fetch("http://fohm-app.folkhalsomyndigheten.se/Folkhalsodata/api/v1/sv/A_Folkhalsodata/L_Vaccin/Covid19/covvaccreg.px", postBody)
-    let dataFixed = await data.json();
-    console.log(dataFixed);
+  ]
 }
 
-test();
+
+async function formatData(){
+
+
+  async function returnKommunerAntal(){
+    let datasetArray = await d3.json("./data.json")
+    let datasetArray1 = datasetArray.data;
+    let kommunIdArray = [];
+    let aktivKommunID = 0;
+    let previousKommunID = 0;
+    for (let i = 0; i < datasetArray1.length; i++) {
+      previousKommunID = aktivKommunID;
+      aktivKommunID = datasetArray1[i].key[0]
+      if(i === 0){
+        aktivKommunID = datasetArray1[i].key[0]
+        previousKommunID = aktivKommunID;
+      }
+
+      if(aktivKommunID !== previousKommunID){
+        kommunIdArray.push(previousKommunID);
+      }
+      
+    }
+    
+    return kommunIdArray.length
+  }
+
+  let datasetArray = await d3.json("./data.json")
+  let datasetArray1 = datasetArray.data;
+  let kommunIdArrayNum = await returnKommunerAntal();
+  
+  function makeNumberAgeInData(a_number_string){
+    if(a_number_string === "1"){
+      return "18-49"
+    }
+    if(a_number_string === "2"){
+      return "50-64"
+    }
+    if(a_number_string === "3"){
+      return "65-79"
+    }
+  }
+
+  let newDataSetFormated = [];
+  for (let i = 0; i < kommunIdArrayNum; i += 6) {
+    let a_region_object = {};
+    a_region_object.valuesForMinst1Dos = [];
+    a_region_object.valuesForAktuellPåfyllnadsdos = [];
+    for (let j = i; j < i + 6; j++) { 
+      a_region_object.år = "2024"
+      a_region_object.id = datasetArray1[j].key[0];
+
+      if(datasetArray1[j].key[1] === "1"){
+        a_region_object.valuesForMinst1Dos.push({
+          åldersGrupp: makeNumberAgeInData(datasetArray1[j].key[2]),
+          value: datasetArray1[j].values
+        })
+      }
+
+      if(datasetArray1[j].key[1] === "2"){
+        a_region_object.valuesForAktuellPåfyllnadsdos.push({
+          åldersGrupp: makeNumberAgeInData(datasetArray1[j].key[2]),
+          value: datasetArray1[j].values
+        })
+      }
+      
+    }
+    newDataSetFormated.push(a_region_object)
+  }
+
+  console.log(newDataSetFormated)
+}
+
+formatData()
