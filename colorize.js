@@ -2,6 +2,9 @@ import { getKommunID } from "./main.js";
 import {startViz} from "./main.js";
 
 
+d3.interpolateBlue(6)
+
+
 export async function getKommun(){
 
     let areaKommun = getKommunID();
