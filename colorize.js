@@ -2,6 +2,8 @@ import { getKommunID } from "./main.js";
 import {startViz} from "./main.js";
 
 
+
+
 export async function getKommun(){
 
     let areaKommun = getKommunID();

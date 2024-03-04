@@ -40,3 +40,29 @@ export async function startViz(){
   return dataID;
 }
 
+for (let i = 0; i <= 3; i++) {
+  let button = d3.select("body").append("button");
+  console.log(i)
+  switch(i){
+    case 0:
+      console.log("hej")
+      button.text("-18 år")
+      button.style("margin", "5px")
+      
+      break;
+    case 1:
+      button.text("18-49 år")
+      button.style("margin", "5px")
+      break;
+    case 2:
+      button.text("50-64 år")
+      button.style("margin", "5px")
+      break;
+
+    case 3:
+      button.text("65-79 år")
+      button.style("margin", "5px")
+      break;
+  }
+}
+
