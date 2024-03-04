@@ -24,45 +24,52 @@ export function getKommunID () {
 
   return kommunDOM;
 }
-getKommun()
-
-
-
-export async function startViz(){
-
-  let dataID = [];
-
-  const dataset = await formatData()
-  console.log(dataset)
-  dataset.forEach( data => {
-    dataID.push(data.id)
-  })
-  return dataID;
-}
+  
 
 for (let i = 0; i <= 3; i++) {
   let button = d3.select("body").append("button");
-  console.log(i)
-  switch(i){
-    case 0:
-      console.log("hej")
-      button.text("-18 år")
-      button.style("margin", "5px")
-      
-      break;
-    case 1:
-      button.text("18-49 år")
-      button.style("margin", "5px")
-      break;
-    case 2:
-      button.text("50-64 år")
-      button.style("margin", "5px")
-      break;
+    switch(i){
+      case 0:
+        button.text("-18 år")
+        button.style("margin", "5px")
 
-    case 3:
-      button.text("65-79 år")
-      button.style("margin", "5px")
-      break;
-  }
+        break;
+      case 1:
+        button.text("18-49 år")
+        button.style("margin", "5px")
+        break;
+      case 2:
+        button.text("50-64 år")
+        button.style("margin", "5px")
+        break;
+
+      case 3:
+        button.text("65-79 år")
+        button.style("margin", "5px")
+        break;
+    }
 }
 
+
+async function getData(firstEntery, lastEntery){
+   const dataset = await formatData()
+
+   let sendData = []
+
+   dataset.forEach(data => {
+      data[firstEntery].forEach( value => {
+        if (value.age === lastEntery){
+          let Data = {
+            "id" : data.id,
+            "value": value.value
+          } 
+          sendData.push(Data)
+
+        } 
+      })
+   })
+   getKommun(sendData)
+   console.log(sendData)
+}
+
+getData("förstaDos", "18-49")

@@ -1,24 +1,23 @@
-import { getKommunID } from "./main.js";
-import {startViz} from "./main.js";
+import { getKommunID } from "./main.js";   
 
-
-d3.interpolateBlue(6)
-
-
-export async function getKommun(){
+export async function getKommun(data){
 
     let areaKommun = getKommunID();
-    let idkommun = await startViz()  
 
-    idkommun.forEach(id => {
+    data.forEach(id => {
         areaKommun.forEach( node => {
-            if(node.id === id){
+            if(node.id === id.id){
                 d3.select(node)
-                .style("fill", "red")
-                console.log("match")
-            }
+                .style("fill", "red") 
+            } else {
+                    console.log("not found")
+                }
         })   
         
     })
 
+}
+
+function renderColor(d, i){
+    i.interpolateBlues(6)
 }

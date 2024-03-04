@@ -42,23 +42,23 @@ export async function formatData(){
   for (let i = 0; i < datasetArray1.length; i += 6) {
     
     let a_region_object = {};
-    a_region_object.valuesForMinst1Dos = [];
-    a_region_object.valuesForAktuellPåfyllnadsdos = [];
+    a_region_object.förstaDos = [];
+    a_region_object.påfyllnadsdos = [];
     
     for (let j = i; j < i + 6; j++) { 
       a_region_object.år = "2024"
       a_region_object.id = datasetArray1[j].key[0];
 
       if(datasetArray1[j].key[1] === "1"){
-        a_region_object.valuesForMinst1Dos.push({
-          åldersGrupp: makeNumberAgeInData(datasetArray1[j].key[2]),
+        a_region_object.förstaDos.push({
+          age: makeNumberAgeInData(datasetArray1[j].key[2]),
           value: datasetArray1[j].values
         })
       }
 
       if(datasetArray1[j].key[1] === "2"){
-        a_region_object.valuesForAktuellPåfyllnadsdos.push({
-          åldersGrupp: makeNumberAgeInData(datasetArray1[j].key[2]),
+        a_region_object.påfyllnadsdos.push({
+          age: makeNumberAgeInData(datasetArray1[j].key[2]),
           value: datasetArray1[j].values
         })
       }
