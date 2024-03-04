@@ -44,13 +44,10 @@ async function formatData(){
     let kommunIdArray = [];
     let aktivKommunID = 0;
     let previousKommunID = 0;
+    
     for (let i = 0; i < datasetArray1.length; i++) {
       previousKommunID = aktivKommunID;
       aktivKommunID = datasetArray1[i].key[0]
-      if(i === 0){
-        aktivKommunID = datasetArray1[i].key[0]
-        previousKommunID = aktivKommunID;
-      }
 
       if(aktivKommunID !== previousKommunID){
         kommunIdArray.push(previousKommunID);
@@ -63,7 +60,7 @@ async function formatData(){
 
   let datasetArray = await d3.json("./data.json")
   let datasetArray1 = datasetArray.data;
-  let kommunIdArrayNum = await returnKommunerAntal();
+  let kommunID = await returnKommunerAntal();
   
   function makeNumberAgeInData(a_number_string){
     if(a_number_string === "1"){
@@ -76,12 +73,15 @@ async function formatData(){
       return "65-79"
     }
   }
+  console.log(kommunID)
 
   let newDataSetFormated = [];
-  for (let i = 0; i < kommunIdArrayNum; i += 6) {
+  for (let i = 0; i < datasetArray1.length; i += 6) {
+    
     let a_region_object = {};
     a_region_object.valuesForMinst1Dos = [];
     a_region_object.valuesForAktuellPåfyllnadsdos = [];
+    
     for (let j = i; j < i + 6; j++) { 
       a_region_object.år = "2024"
       a_region_object.id = datasetArray1[j].key[0];
