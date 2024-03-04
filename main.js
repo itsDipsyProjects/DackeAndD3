@@ -4,8 +4,7 @@ import {formatData} from "./formatData.js"
 d3.selectAll("polygon")
 
 let dataValue = d3.selectAll("polygon")._groups[0]
-let kommunDOM = array.from(dataValue)
-
+let dataValueG = d3.selectAll("g")._groups[0];
 
 let kommunDOMP = Array.from(dataValue)
 let kommunDOMG = Array.from(dataValueG)
@@ -27,6 +26,8 @@ console.log(kommunID)
 
 
 startViz()
+
+let dataID = [];
 
 
 async function startViz(){
