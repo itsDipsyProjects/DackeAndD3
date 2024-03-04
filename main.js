@@ -1,11 +1,45 @@
 import {formatData} from "./formatData.js"
-import { colorizeKommun } from "./colorize.js"
+
+
+d3.selectAll("polygon")
+
+let dataValue = d3.selectAll("polygon")._groups[0]
+let kommunDOM = array.from(dataValue)
+
+
+let kommunDOMP = Array.from(dataValue)
+let kommunDOMG = Array.from(dataValueG)
+
+let kommunDOM = kommunDOMP.concat(kommunDOMG)
+
+console.log(kommunDOM)
+
+let kommunID = [] 
+
+kommunDOM.forEach(data => {
+
+let id = parseInt(data.id)
+if(!isNaN(id)){
+kommunID.push(id)
+}})
+
+console.log(kommunID)
+
+
+startViz()
 
 
 async function startViz(){
   const dataset = await formatData()
-  let testValue = dataset[0];
-  
-  console.log(dataset);
+  dataset.forEach( data => {
+      let id = parseInt(data.id)
+    dataID.push(id)
+  })
+
+  let svg = d3.select("svg2")
+
+  //let extraValues = dataID.filter(value => !kommunID.includes(value));
+  //console.log(extraValues);
+
 }
 startViz()
