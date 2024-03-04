@@ -1,5 +1,5 @@
 import {formatData} from "./formatData.js"
-import { getKommun } from "./colorize.js";
+import { getColor } from "./colorize.js";
 
 
 export function getKommunID () {
@@ -68,8 +68,7 @@ async function getData(firstEntery, lastEntery){
         } 
       })
    })
-   getKommun(sendData)
-   console.log(sendData)
+   getColor(sendData)
 }
 
 getData("förstaDos", "18-49")
