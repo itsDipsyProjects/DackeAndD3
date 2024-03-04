@@ -73,7 +73,6 @@ async function formatData(){
       return "65-79"
     }
   }
-  console.log(kommunID)
 
   let newDataSetFormated = [];
   for (let i = 0; i < datasetArray1.length; i += 6) {
@@ -104,7 +103,17 @@ async function formatData(){
     newDataSetFormated.push(a_region_object)
   }
 
-  console.log(newDataSetFormated)
+
+
+  return newDataSetFormated;
 }
 
-formatData()
+
+async function startViz(){
+  const dataset = await formatData()
+  console.log(dataset);
+}
+
+
+startViz()
+
