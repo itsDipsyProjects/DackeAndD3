@@ -47,6 +47,8 @@ let kommunDOMG = Array.from(dataValueG)
 
 let kommunDOM = kommunDOMP.concat(kommunDOMG)
 
+console.log(kommunDOM)
+
 let kommunID = [] 
 
 kommunDOM.forEach(data => {
@@ -69,6 +71,8 @@ async function startViz(){
       let id = parseInt(data.id)
     dataID.push(id)
   })
+
+  let svg = d3.select("svg2")
 
   //let extraValues = dataID.filter(value => !kommunID.includes(value));
   //console.log(extraValues);
