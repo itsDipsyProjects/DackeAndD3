@@ -1,14 +1,6 @@
 import { getKommunID } from "./main.js";
-
 import {startViz} from "./main.js";
 
-
-
-
-export function colorizeKommun(kommunId, polygonList, dataset,  minstEnDos, akutellpåfyllnadsDOs, åldersGrupp) 
-{
-   
-}
 
 export async function getKommun(){
 
