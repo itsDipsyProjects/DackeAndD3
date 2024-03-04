@@ -36,19 +36,44 @@ let a_snippet_of_data_example =
   ]
 }
 
-
 d3.selectAll("polygon")
 
-let dataValue = d3.selectAll("polygon")._groups[0]
-let kommunDOM = array.from(dataValue)
+let dataValue = d3.selectAll("polygon")._groups[0];
+let dataValueG = d3.selectAll("g")._groups[0]
 
-console.log(kommunDOM)
+
+let kommunDOMP = Array.from(dataValue)
+let kommunDOMG = Array.from(dataValueG)
+
+let kommunDOM = kommunDOMP.concat(kommunDOMG)
+
+let kommunID = [] 
+
+kommunDOM.forEach(data => {
+
+let id = parseInt(data.id)
+if(!isNaN(id)){
+kommunID.push(id)
+}})
+
+console.log(kommunID)
 
 
 startViz()
 
+let dataID = [];
 
 async function startViz(){
   const dataset = await formatData()
-  console.log(dataset);
+  dataset.forEach( data => {
+      let id = parseInt(data.id)
+    dataID.push(id)
+  })
+
+  //let extraValues = dataID.filter(value => !kommunID.includes(value));
+  //console.log(extraValues);
+
 }
+
+
+
