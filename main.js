@@ -25,37 +25,38 @@ export function getKommunID () {
   return kommunDOM;
 }
   
+function createSVG (){
 
-for (let i = 0; i <= 3; i++) {
-  let button = d3.select("body").append("button");
-    switch(i){
-      case 0:
-        button.text("-18 år")
-        button.style("margin", "5px")
+let buttonData = ["-18", "18-49", "50-64", "65-79"];
 
-        break;
-      case 1:
-        button.text("18-49 år")
-        button.style("margin", "5px")
-        break;
-      case 2:
-        button.text("50-64 år")
-        button.style("margin", "5px")
-        break;
+let gViz = d3.select("svg")
+          .append("g")
+          .attr("transform", "translate(250, 100)");
 
-      case 3:
-        button.text("65-79 år")
-        button.style("margin", "5px")
-        break;
-    }
+let buttons = gViz.selectAll("button")
+    .data(buttonData)
+    .enter()
+    .append("text")
+    .attr("class", "button")
+    .attr("x", (d, i) => i * 75) 
+    .attr("y", 250) 
+    .text(d => d + "år")
+    .style("border", "1px solid black")
+    .style("cursor", "pointer")
+    .style("font-size", 10)
+    .style("background-color", "blue")
+    .on("click", (i, d) => {
+      //console.log("clicked", d)
+        getData("förstaDos", d)
+    });
+
 }
 
 
 async function getData(firstEntery, lastEntery){
    const dataset = await formatData()
-
    let sendData = []
-
+  console.log(firstEntery, lastEntery)
    dataset.forEach(data => {
       data[firstEntery].forEach( value => {
         if (value.age === lastEntery){
@@ -63,7 +64,10 @@ async function getData(firstEntery, lastEntery){
             "id" : data.id,
             "value": value.value
           } 
-          sendData.push(Data)
+            console.log(Data)
+            sendData.push(Data)
+
+          
 
         } 
       })
@@ -71,4 +75,5 @@ async function getData(firstEntery, lastEntery){
    getColor(sendData)
 }
 
-getData("förstaDos", "18-49")
+//getData("förstaDos", "18-49")
+createSVG()
