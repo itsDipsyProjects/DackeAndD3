@@ -1,18 +1,12 @@
 import {formatData} from "./formatData.js"
+import { colorizeKommun } from "./colorize.js"
 
-
-d3.selectAll("polygon")
-
-let dataValue = d3.selectAll("polygon")._groups[0]
-let kommunDOM = array.from(dataValue)
-
-console.log(kommunDOM)
-
-
-startViz()
-
+let dataID = [];
 
 async function startViz(){
   const dataset = await formatData()
+  let testValue = dataset[0];
+  
   console.log(dataset);
 }
+startViz()
