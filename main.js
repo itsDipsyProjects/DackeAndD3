@@ -1,11 +1,13 @@
 import {formatData} from "./formatData.js"
 
 
-function getKommunID () {
+export function getKommunID () {
   d3.selectAll("polygon")
 
   let dataValue = d3.selectAll("polygon")._groups[0]
   let dataValueG = d3.selectAll("g")._groups[0];
+
+
 
   let kommunDOMP = Array.from(dataValue)
   let kommunDOMG = Array.from(dataValueG)
