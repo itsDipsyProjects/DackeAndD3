@@ -115,5 +115,10 @@ async function startViz(){
 }
 
 
+d3.selectAll("polygon")
+
+let kommun = console.log(d3.selectAll("polygon")._groups[0]
+)
+
 startViz()
 
