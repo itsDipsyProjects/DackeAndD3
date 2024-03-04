@@ -1,36 +1,40 @@
 import {formatData} from "./formatData.js"
 
 
-d3.selectAll("polygon")
+function getKommunID () {
+  d3.selectAll("polygon")
 
-let dataValue = d3.selectAll("polygon")._groups[0]
-let dataValueG = d3.selectAll("g")._groups[0];
+  let dataValue = d3.selectAll("polygon")._groups[0]
+  let dataValueG = d3.selectAll("g")._groups[0];
 
-let kommunDOMP = Array.from(dataValue)
-let kommunDOMG = Array.from(dataValueG)
+  let kommunDOMP = Array.from(dataValue)
+  let kommunDOMG = Array.from(dataValueG)
 
-let kommunDOM = kommunDOMP.concat(kommunDOMG)
+  let kommunDOM = kommunDOMP.concat(kommunDOMG)
 
-console.log(kommunDOM)
+  let kommunID = [] 
 
-let kommunID = [] 
+  kommunDOM.forEach(data => {
 
-kommunDOM.forEach(data => {
+  let id = parseInt(data.id)
+  if(!isNaN(id)){
+  kommunID.push(id)
+  }})
 
-let id = parseInt(data.id)
-if(!isNaN(id)){
-kommunID.push(id)
-}})
+  return kommunDOM;
+}
+  
 
-console.log(kommunID)
 
 
 startViz()
 
-let dataID = [];
 
 
 async function startViz(){
+
+  let dataID = [];
+
   const dataset = await formatData()
   dataset.forEach( data => {
       let id = parseInt(data.id)
