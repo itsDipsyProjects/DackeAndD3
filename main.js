@@ -43,3 +43,4 @@ async function startViz(){
   //console.log(extraValues);
 
 }
+startViz()
