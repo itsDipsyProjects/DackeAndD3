@@ -2,29 +2,21 @@ import {formatData} from "./formatData.js"
 import { getColor } from "./colorize.js";
 
 
-export function getKommunID () {
-  d3.selectAll("polygon")
+// let data =d3.scv("...")
 
-  let dataValue = d3.selectAll("polygon")._groups[0]
+//d3.scaleLinear(0, max),  [blue, "red"]
 
-  let dataValueG = d3.selectAll("g")._groups[0];
 
-  let kommunDOMP = Array.from(dataValue)
-  let kommunDOMG = Array.from(dataValueG)
+export async function getKommunID () {
 
-  let kommunDOM = kommunDOMP.concat(kommunDOMG)
-
-console.log(kommunDOM)
   let kommunID = [] 
 
-  kommunDOM.forEach(data => {
-  let id = parseInt(data.id)
+  const dataset = await formatData()
+  dataset.forEach( data => {
+    kommunID.push(data.id)
+  })
 
-  if(id !== NaN){
-  kommunID.push(id)
-  }})
-
-  return kommunDOM;
+  return kommunID;
 }
   
 function createSVG (){
@@ -155,9 +147,8 @@ function createSVG (){
 async function getData(akutellDosEller1Dos, åldersgrupp){
    const dataset = await formatData()
 
-   console.log(dataset)
    let sendData = []
-   console.log(akutellDosEller1Dos, åldersgrupp)
+
    dataset.forEach(data => {
     if(akutellDosEller1Dos === "förstaDos"){
       data.förstaDos.forEach( value => {
@@ -171,7 +162,7 @@ async function getData(akutellDosEller1Dos, åldersgrupp){
         } 
       })
     }
-    else{
+    else {
       data.påfyllnadsdos.forEach( value => {
         
         if (value.age === åldersgrupp){
@@ -186,13 +177,15 @@ async function getData(akutellDosEller1Dos, åldersgrupp){
       getColor(sendData,"andraDos" )
     }
   })
+
   if(akutellDosEller1Dos === "förstaDos"){
     getColor(sendData,"förstDos" )
   }
+
   if(akutellDosEller1Dos === "andraDos"){
     getColor(sendData,"andraDos" )
   }
 }
 
-//getData("förstaDos", "18-49")
+
 createSVG()

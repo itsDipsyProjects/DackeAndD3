@@ -1,4 +1,4 @@
-import { getKommunID } from "./main.js";   
+//import { areaRadial } from "d3-shape";
 
 export async function getColor(data, akutellDosEller1Dos){
 
@@ -6,48 +6,33 @@ export async function getColor(data, akutellDosEller1Dos){
                         .domain([50, 100]); 
 
     const colorScaleRed = d3.scaleSequential(d3.interpolateReds)
-                        .domain([10, 100]); 
-  
+                        .domain([10, 100])
+
     if(akutellDosEller1Dos === "förstDos"){
-        let areaKommun = getKommunID();
         
         data.forEach((item, i) => {
-            const node = areaKommun.find(node => node.id === item.id);
-            
-            if (node) {
-                d3.select(node)
+            const node = d3.select(`#x${item.id}`)
                     .style("fill", colorScaleBlue(item.value))
                     .on("click", (e) =>  {
                         console.log(item.value)
                         
                     })
-            } else {
-                console.log("Node not found, id: ", item.id);
-            }
         });
     }
     if(akutellDosEller1Dos === "andraDos"){
-        let areaKommun = getKommunID();
-
-        data.forEach((item, i)=> {
-            
-            const node = areaKommun.find(node => node.id === item.id);
            
-            if (node) {
-                d3.select(node)
+        data.forEach((item, i) => {
+        const node = d3.select(`#x${item.id}`)
                 .style("fill", colorScaleRed(item.value))
                 .on("click", (e) =>  {
                     console.log(item.value)
-                    
+
                 })
-            } else {
-                console.log("Node not found, id: ", item.id);
-            }
         });
+
     }
 
 }
-
 
 
   
