@@ -34,5 +34,13 @@ export async function getColor(data, akutellDosEller1Dos){
 
 }
 
+function XYcor(event){
+    const svgDom = document.querySelector("svg");
+    let point = svgDom.createSVGPoint();
+    point.x = event.clientX;
+    point.y = event.clientY;
+    return point.matrixTransform(svgDom.getScreenCTM()).inverse();
+}
+
 
   
