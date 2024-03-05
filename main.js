@@ -7,10 +7,8 @@ export function getKommunID () {
 
   let dataValue = d3.selectAll("polygon")._groups[0]
 
-  console.log(dataValue.length)
   let dataValueG = d3.selectAll("g")._groups[0];
 
-  console.log(dataValueG.length)
   let kommunDOMP = Array.from(dataValue)
   let kommunDOMG = Array.from(dataValueG)
 
@@ -20,8 +18,8 @@ console.log(kommunDOM)
   let kommunID = [] 
 
   kommunDOM.forEach(data => {
-
   let id = parseInt(data.id)
+
   if(id !== NaN){
   kommunID.push(id)
   }})
@@ -95,12 +93,12 @@ function createSVG (){
       return (i * 70) + previous
     }) 
     .attr("y", 270)
-    .attr("text-anchor", "middle") // Center the text horizontally
-    .attr("alignment-baseline", "middle") // Center the text vertically
+    .attr("text-anchor", "middle") 
+    .attr("alignment-baseline", "middle") 
     .text(d => d + "år") 
     .style("font-size", 15)
     .style("cursor", "pointer")
-    .style("user-select", "none") // Disable text selection
+    .style("user-select", "none") 
     .on("click", (i, d) => {
       //console.log("clicked", d)
       getData("förstaDos", d)
@@ -119,14 +117,14 @@ function createSVG (){
     return (i * 70) + previous
   }) 
   .attr("y", 520)
-  .attr("text-anchor", "middle") // Center the text horizontally
-  .attr("alignment-baseline", "middle") // Center the text vertically
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle") 
   .text(d => d + "år") 
   .style("font-size", 15)
   .style("cursor", "pointer")
-  .style("user-select", "none") // Disable text selection
+  .style("user-select", "none") 
   .on("click", (i, d) => {
-    //console.log("clicked", d)
+  
     getData("andraDos", d)
     console.log(d)
   });
