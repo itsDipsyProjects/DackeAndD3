@@ -2,11 +2,12 @@
 
 export async function getColor(data, akutellDosEller1Dos){
 
-    const colorScaleBlue = d3.scaleSequential(d3.interpolateBlues)
+    const colorScaleBlue = d3.scaleLinear([80,100], ["lightblue", "purple"])
                         .domain([50, 100]); 
 
-    const colorScaleRed = d3.scaleSequential(d3.interpolateReds)
-                        .domain([10, 100])
+      const colorScaleRed = d3.scaleLinear([50,100], ["blue", "red"])
+                        .domain([50, 100]); 
+  
 
     if(akutellDosEller1Dos === "förstDos"){
         
