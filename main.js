@@ -6,19 +6,23 @@ export function getKommunID () {
   d3.selectAll("polygon")
 
   let dataValue = d3.selectAll("polygon")._groups[0]
+
+  console.log(dataValue.length)
   let dataValueG = d3.selectAll("g")._groups[0];
 
+  console.log(dataValueG.length)
   let kommunDOMP = Array.from(dataValue)
   let kommunDOMG = Array.from(dataValueG)
 
   let kommunDOM = kommunDOMP.concat(kommunDOMG)
 
+console.log(kommunDOM)
   let kommunID = [] 
 
   kommunDOM.forEach(data => {
 
   let id = parseInt(data.id)
-  if(!isNaN(id)){
+  if(id !== NaN){
   kommunID.push(id)
   }})
 
@@ -55,6 +59,8 @@ let buttons = gViz.selectAll("button")
 
 async function getData(firstEntery, lastEntery){
    const dataset = await formatData()
+
+   console.log(dataset)
    let sendData = []
   console.log(firstEntery, lastEntery)
    dataset.forEach(data => {
