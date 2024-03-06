@@ -1,11 +1,26 @@
-//import { areaRadial } from "d3-shape";
 
 
-export async function getColor(data, akutellDosEller1Dos){
+export async function getColor(data, akutellDosEller1Dos, maxNmin){
     
-    const colorScaleBlue = d3.scaleLinear([80,100], ["lightblue", "darkgreen"])
+    let max = maxNmin.max;
+    let min = maxNmin.min;
+    let middle = Math.round(min + max) / 2
 
-    const colorScaleRed = d3.scaleLinear([30,100], ["yellow", "red"])
+    console.log("max value:",max)
+    console.log("min value:", min)
+    console.log("middle value", middle)
+
+    const colorScale = d3.scaleLinear([min, max], ["yellow", "darkgreen"])
+
+    let minColor = colorScale(min)
+    let maxColor = colorScale(max)
+    let middleColor = colorScale(middle)    
+    
+    //d3.selectAll("legend")
+    //    .data()
+    //    .append("legend")
+
+
 
     if(akutellDosEller1Dos === "förstDos"){
         data.forEach((item, i) => {
@@ -16,11 +31,12 @@ export async function getColor(data, akutellDosEller1Dos){
                     .transition()
                     .delay(i * 4)
                     .duration(100) 
-                    .style("fill", colorScaleBlue(item.value))
+                    .style("fill", colorScale(item.value))
 
         });
     }
-    if(akutellDosEller1Dos === "andraDos"){
+
+    if (akutellDosEller1Dos === "andraDos"){
         data.forEach((item, i) => {
             const node = d3.select(`#x${item.id}`)
             .on("mouseover", (e) =>  {
@@ -45,7 +61,7 @@ export async function getColor(data, akutellDosEller1Dos){
             .transition()
             .delay(i * 4)
             .duration(10) 
-            .style("fill", colorScaleBlue(item.value))
+            .style("fill", colorScale(item.value))
 
         });
     }

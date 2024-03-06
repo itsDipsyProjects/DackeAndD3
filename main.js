@@ -1,9 +1,7 @@
 import {formatData} from "./formatData.js"
 import { getColor } from "./colorize.js";
 
-
 // let data =d3.scv("...")
-// reverse order of dataset-array algorythm
 
 export async function getKommunID () {
 
@@ -50,9 +48,14 @@ function createSVG (){
     .attr("height", 35)
     .attr("fill", "grey")
     .on("click", (i, d) => {
-      //console.log("clicked", d)
       getData("förstaDos", d)
     });
+
+ //   legend({
+ //     color: d3.scaleOrdinal(["<10", "10-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "≥80"], d3.schemeSpectral[10]),
+ //     title: "Age (years)",
+ //     tickSize: 0
+ //   })
 
     
   let gVizbuttons2 = gVizButtonsContainer.selectAll("rect2")
@@ -65,7 +68,6 @@ function createSVG (){
   .attr("height", 35)
   .attr("fill", "grey")
   .on("click", (i, d) => {
-    //console.log("clicked", d)
     getData("andraDos", d)
   });
 
@@ -90,7 +92,6 @@ function createSVG (){
     .style("cursor", "pointer")
     .style("user-select", "none") 
     .on("click", (i, d) => {
-      //console.log("clicked", d)
       getData("förstaDos", d)
       
     });
@@ -114,9 +115,7 @@ function createSVG (){
   .style("cursor", "pointer")
   .style("user-select", "none") 
   .on("click", (i, d) => {
-  
     getData("andraDos", d)
-    console.log(d)
   });
 
   
@@ -142,28 +141,52 @@ function createSVG (){
 }
 
 
-async function getData(akutellDosEller1Dos, åldersgrupp){
-   const dataset = await formatData()
+async function getData(dos, åldersgrupp){
 
-   let sendData = []
-   console.log
+  const dataset = await formatData()
+
+  let sendData = []
+  let highestValue = dataset[0].forstaDos[0].value;
+  let lowestValue = dataset[0].forstaDos[0].value;
 
    dataset.forEach(data => {
-    if(akutellDosEller1Dos === "förstaDos"){
+
+    if(dos === "förstaDos"){
       data.forstaDos.forEach( value => {
+
         if (value.age === åldersgrupp){
+
+            if (value.value < lowestValue) {
+              lowestValue = value.value;
+            }
+
+            if (value.value > highestValue) {
+              highestValue = value.value;
+            } 
+
           let Data = {
             "id" : data.id,
             "value": value.value
-          } 
-            
+          }            
             sendData.push(Data)
+            
         } 
       })
-    }
-    if(akutellDosEller1Dos === "andraDos") {
+    } 
+
+    if(dos === "andraDos") {
       data.påfyllnadsdos.forEach( value => {
+
         if (value.age === åldersgrupp){
+
+          if (value.value < lowestValue) {
+              lowestValue = value.value;
+            }
+
+          if (value.value > highestValue) {
+              highestValue = value.value;
+            } 
+
           let Data = {
             "id" : data.id,
             "value": value.value
@@ -175,14 +198,24 @@ async function getData(akutellDosEller1Dos, åldersgrupp){
     }
   })
 
-  if(akutellDosEller1Dos === "förstaDos"){
-    getColor(sendData,"förstDos" )
+  if(dos === "förstaDos"){
+   
+    let maxNmin = {
+      "max" : parseInt(highestValue[0]),
+      "min": parseInt(lowestValue[0]),
+    }
+    getColor(sendData,"förstDos", maxNmin)
+    
   }
 
-  if(akutellDosEller1Dos === "andraDos"){
-    getColor(sendData,"andraDos" )
+  if(dos === "andraDos"){
+
+      let maxNmin = {
+        "max" : parseInt(highestValue[0]),
+        "min": parseInt(lowestValue[0])
+    }
+    getColor(sendData,"andraDos", maxNmin)
   }
 }
-
 
 createSVG()
