@@ -31,7 +31,7 @@ export async function getColor(data, akutellDosEller1Dos){
                         .attr("x", `${e.clientX - 135}`)
                         .attr("y", `${e.clientY + 30}`)
                         .text(`${item.value}%`)
-
+                        
 
                        
 
@@ -41,21 +41,20 @@ export async function getColor(data, akutellDosEller1Dos){
                         
                          
                         d3.selectAll(".hoverGroupd").remove();
-                        
-                    .on("mouseover", (e) =>  {
-                        console.log(item.value)    
-                    })
-                    .transition()
-                    .delay(i * 4)
-                    .duration(100) 
-                    .style("fill", colorScaleBlue(item.value))
-
-        });
+                    });
+        
+        
+        })
     }
+
     if(akutellDosEller1Dos === "andraDos"){
            
         data.forEach((item, i) => {
         const node = d3.select(`#x${item.id}`)
+                .transition()
+                .delay(i * 4)
+                .duration(100) 
+                .style("fill", colorScaleRed(item.value))
                 .on("click", (e) =>  {
                       
                     d3.select("svg").append("g").classed("hoverGroupd",true)
@@ -82,14 +81,9 @@ export async function getColor(data, akutellDosEller1Dos){
                 })
                     console.log(item.value)
                 })
-                .transition()
-                .delay(i * 4)
-                .duration(100) 
-                .style("fill", colorScaleRed(item.value))
+                 
 
-        });
-
-    }
+     };
 
 }
 
