@@ -161,20 +161,17 @@ async function getData(akutellDosEller1Dos, åldersgrupp){
         } 
       })
     }
-    else {
+    if(akutellDosEller1Dos === "andraDos") {
       data.påfyllnadsdos.forEach( value => {
-        
         if (value.age === åldersgrupp){
           let Data = {
             "id" : data.id,
             "value": value.value
           } 
-          
-          sendData.push(Data)
+            
+            sendData.push(Data)
         } 
-      })
-      
-      getColor(sendData,"andraDos" )
+      }) 
     }
   })
 
