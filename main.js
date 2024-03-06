@@ -3,6 +3,7 @@ import { getColor } from "./colorize.js";
 
 
 // let data =d3.scv("...")
+// reverse order of dataset-array algorythm
 
 export async function getKommunID () {
 
@@ -145,10 +146,11 @@ async function getData(akutellDosEller1Dos, åldersgrupp){
    const dataset = await formatData()
 
    let sendData = []
+   console.log
 
    dataset.forEach(data => {
     if(akutellDosEller1Dos === "förstaDos"){
-      data.förstaDos.forEach( value => {
+      data.forstaDos.forEach( value => {
         if (value.age === åldersgrupp){
           let Data = {
             "id" : data.id,

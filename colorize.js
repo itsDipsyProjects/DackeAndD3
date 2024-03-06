@@ -4,7 +4,7 @@ export async function getColor(data, akutellDosEller1Dos){
 
     const colorScaleBlue = d3.scaleLinear([80,100], ["lightblue", "darkgreen"])
 
-    const colorScaleRed = d3.scaleLinear([30,100], ["yellow", "red"])
+    const colorScaleRed = d3.scaleLinear([30,100], ["lightblue", "darkgreen"])
 
 
     if(akutellDosEller1Dos === "förstDos"){
@@ -15,7 +15,7 @@ export async function getColor(data, akutellDosEller1Dos){
                         console.log(item.value)    
                     })
                     .transition()
-                    .delay(i * 4)
+                    .delay(i * 32)
                     .duration(100) 
                     .style("fill", colorScaleBlue(item.value))
 
