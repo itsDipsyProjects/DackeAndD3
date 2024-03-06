@@ -4,9 +4,6 @@ import { getColor } from "./colorize.js";
 
 // let data =d3.scv("...")
 
-//d3.scaleLinear(0, max),  [blue, "red"]
-
-
 export async function getKommunID () {
 
   let kommunID = [] 
@@ -174,6 +171,7 @@ async function getData(akutellDosEller1Dos, åldersgrupp){
           sendData.push(Data)
         } 
       })
+      
       getColor(sendData,"andraDos" )
     }
   })
