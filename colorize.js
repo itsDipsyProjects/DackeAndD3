@@ -14,11 +14,10 @@ export async function getColor(data, akutellDosEller1Dos, maxNmin){
 
     let minColor = colorScale(min)
     let maxColor = colorScale(max)
-    let middleColor = colorScale(middle)    
+    let middleColor = colorScale(middle)  
     
-    //d3.selectAll("legend")
-    //    .data()
-    //    .append("legend")
+    //let legend = d3.legend()
+    //    .style("")
 
 
 

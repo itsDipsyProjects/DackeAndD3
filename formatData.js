@@ -54,7 +54,6 @@ export async function formatData(){
   }
 
   sendData.reverse()
-
   return sendData;
 }
 

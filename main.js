@@ -23,7 +23,6 @@ function createSVG (){
   let gVizButtonsContainer = d3.select("svg")
     .append("g")
     .attr("transform", "translate(250, 100)");
-  
 
   let rubrikMinst1Dos = d3.select("svg").append("text")
   .text("Minst 1 Dos")
@@ -51,13 +50,7 @@ function createSVG (){
       getData("förstaDos", d)
     });
 
- //   legend({
- //     color: d3.scaleOrdinal(["<10", "10-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "≥80"], d3.schemeSpectral[10]),
- //     title: "Age (years)",
- //     tickSize: 0
- //   })
-
-    
+ 
   let gVizbuttons2 = gVizButtonsContainer.selectAll("rect2")
   .data(buttonData)
   .enter()
@@ -70,8 +63,6 @@ function createSVG (){
   .on("click", (i, d) => {
     getData("andraDos", d)
   });
-
-
 
   
   gVizButtonsContainer.selectAll("textfirst")
@@ -118,6 +109,14 @@ function createSVG (){
     getData("andraDos", d)
   });
 
+
+      let legend = d3.select("svg").append("g")
+                                  .classed("legend", true)
+                                  .append("rect")
+                                        .attr("width", 200)
+                                        .attr("height", 10)
+                                        .attr("x", 400)
+                                        .attr("y", 70) 
   
 
 // let buttons = gVizbuttons.selectAll("button")
@@ -138,6 +137,11 @@ function createSVG (){
 //         console.log(d)
 //     });
 
+}
+
+function createLegend(){
+  d3.select("legend")
+    .style("fill", "red")
 }
 
 
@@ -219,3 +223,4 @@ async function getData(dos, åldersgrupp){
 }
 
 createSVG()
+createLegend()
