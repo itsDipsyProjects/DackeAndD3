@@ -28,22 +28,22 @@ export async function formatData(){
   for (let i = 0; i < dataset.length; i += 6) {
         
     let region_object = {};
-    region_object.forstaDos = [];
-    region_object.påfyllnadsdos = [];
+    region_object.firstDos = [];
+    region_object.latestDos = [];
     
     
     for (let j = i; j < i + 6; j++) { 
       region_object.id = dataset[j].key[0];
 
       if (dataset[j].key[1] === "1"){
-          region_object.forstaDos.push({
+          region_object.firstDos.push({
             age: keyValue(dataset[j].key[2]),
             value: dataset[j].values
           })
         }
 
       if (dataset[j].key[1] === "2"){
-        region_object.påfyllnadsdos.push({
+        region_object.latestDos.push({
           age: keyValue(dataset[j].key[2]),
           value: dataset[j].values
         })

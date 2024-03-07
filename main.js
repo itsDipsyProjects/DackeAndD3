@@ -72,7 +72,7 @@ function createSVG (){
                       .style("cursor", "pointer")
                       .style("user-select", "none") 
                       .on("click", (i, d) => {
-                        getData("förstaDos", d)
+                        getData("firstDos", d)
 
                       });
 
@@ -95,33 +95,9 @@ function createSVG (){
                       .style("cursor", "pointer")
                       .style("user-select", "none") 
                       .on("click", (i, d) => {
-                        getData("andraDos", d)
+                        getData("latestDos", d)
                       });
 
-                                  //.append("rect")
-                                  //      .attr("width", 200)
-                                  //      .attr("height", 10)
-                                  //      .attr("x", 400)
-                                  //      .attr("y", 70) 
-  //
-
-// let buttons = gVizbuttons.selectAll("button")
-//     .data(buttonData)
-//     .enter()
-//     .append("text")
-//     .attr("class", "button")
-//     .attr("x", (d, i) => i * 75) 
-//     .attr("y", 250) 
-//     .text(d => d + "år")
-//     .style("border", "1px solid black")
-//     .style("cursor", "pointer")
-//     .style("font-size", 10)
-//     .style("background-color", "blue")
-//     .on("click", (i, d) => {
-//       //console.log("clicked", d)
-//         getData("förstaDos", d)
-//         console.log(d)
-//     });
 
 const defaultV = [0, 50, 100];
 
@@ -141,6 +117,7 @@ const defaultV = [0, 50, 100];
                   .append("text")
                   .attr("x", (d, i) => { return i * 100 + 340; }) 
                   .attr("y", 160)
+                  .text(d => d)
 
           
 
@@ -175,36 +152,30 @@ console.log(maxNmin)
 
 }
 
-
-  function createLegend() {
-    d3.select("legend")
-      .style("fill", "red")
-    console.log("inne")
-  }
-
-
-  async function getData(dos, åldersgrupp) {
+  async function getData(dos, agegroup) {
 
     const dataset = await formatData()
     console.log(dataset)
     let sendData = []
-    let highestValue = dataset[0].forstaDos[0].value;
-    let lowestValue = dataset[0].forstaDos[0].value;
+
+    let highestValue = dataset[0].firstDos[0].value;
+    let lowestValue = dataset[0].firstDos[0].value;
+
 
     dataset.forEach(data => {
       
-      if (dos === "förstaDos") {
-        data.forstaDos.forEach(value => {
+      if (dos === "firstDos") {
+        data.firstDos.forEach(value => {
 
-          if (value.age === åldersgrupp) {
+          if (value.age === agegroup) {
 
             if (value.value < lowestValue) {
               lowestValue = value.value;
-            }
+              }
 
             if (value.value > highestValue) {
               highestValue = value.value;
-            }
+              }
 
             let Data = {
               "id": data.id,
@@ -212,31 +183,31 @@ console.log(maxNmin)
               "population": data.population,
               "kommunNamn": data.kommunNamn,
             }
-            sendData.push(Data)
 
+            sendData.push(Data)
           }
         })
       }
 
-      if (dos === "andraDos") {
-        data.påfyllnadsdos.forEach(value => {
+      if (dos === "latestdos") {
+        data.latestDos.forEach(value => {
 
-          if (value.age === åldersgrupp) {
+          if (value.age === agegroup) {
 
             if (value.value < lowestValue) {
               lowestValue = value.value;
-            }
+              }
 
             if (value.value > highestValue) {
               highestValue = value.value;
-            }
+              }
 
             let Data = {
               "id": data.id,
               "value": value.value,
               "population": data.population,
               "kommunNamn": data.kommunNamn,
-            }
+              }
 
             sendData.push(Data)
           }
@@ -244,10 +215,10 @@ console.log(maxNmin)
       }
     })
 
-  if(dos === "förstaDos"){
+  if(dos === "firstDos"){
 
-    let max =  parseInt(lowestValue[0]);
-    let min = parseInt(highestValue[0]);
+    let max =  parseInt(highestValue[0]);
+    let min = parseInt(lowestValue[0]);
     let middle = Math.round(min + max) / 2;
    
     let maxNmin = {
@@ -256,14 +227,14 @@ console.log(maxNmin)
       "min": min,
     }
 
-    getColor(sendData,"förstDos", maxNmin)
+    getColor(sendData,"firstDos", maxNmin)
     
   }
 
-  if(dos === "andraDos"){
+  if(dos === "latestDos"){
 
-        let max =  parseInt(lowestValue[0]);
-    let min = parseInt(highestValue[0]);
+    let max =  parseInt(highestValue[0]);
+    let min = parseInt(lowestValue[0]);
     let middle = Math.round(min + max) / 2;
 
       let maxNmin = {
@@ -272,8 +243,7 @@ console.log(maxNmin)
         "min": min,
         
     }
-
-    getColor(sendData,"förstDos", maxNmin)
+    getColor(sendData,"latestDos", maxNmin)
   }
 }
 
