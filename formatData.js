@@ -1,73 +1,85 @@
 
 export async function formatData(){
 
+  let population = await formatPopulation() 
 
-  async function returnKommunerAntal(){
-    let datasetArray = await d3.json("./data.json")
-    let datasetArray1 = datasetArray.data;
-    let kommunIdArray = [];
-    let aktivKommunID = 0;
-    let previousKommunID = 0;
-    
-    for (let i = 0; i < datasetArray1.length; i++) {
-      previousKommunID = aktivKommunID;
-      aktivKommunID = datasetArray1[i].key[0]
-
-      if(aktivKommunID !== previousKommunID){
-        kommunIdArray.push(previousKommunID);
-      }
-      
-    }
-    
-    return kommunIdArray.length
-  }
-
-  let datasetArray = await d3.json("./data.json")
-  let datasetArray1 = datasetArray.data;
-  let kommunID = await returnKommunerAntal();
+  let datasetArray = await d3.json("./API/data_vaccination.json")
+  let dataset = datasetArray.data;  
   
-  function makeNumberAgeInData(a_number_string){
+  function keyValue(a_number_string){
     if(a_number_string === "1"){
       return "18-49"
     }
+
     if(a_number_string === "2"){
       return "50-64"
+
     }
     if(a_number_string === "3"){
       return "65-79"
     }
   }
 
-  let newDataSetFormated = [];
-  for (let i = 0; i < datasetArray1.length; i += 6) {
+  let sendData = [];
+
+  for (let i = 0; i < dataset.length; i += 6) {
     
-    let a_region_object = {};
-    a_region_object.förstaDos = [];
-    a_region_object.påfyllnadsdos = [];
+    let pValue = (population.find(item => item.id === dataset[i].id)).value;
+    
+    let region_object = {};
+    region_object.forstaDos = [];
+    region_object.påfyllnadsdos = [];
+       
     
     for (let j = i; j < i + 6; j++) { 
-      a_region_object.år = "2024"
-      a_region_object.id = datasetArray1[j].key[0];
+      region_object.id = dataset[j].key[0];
+      region_object.population = pValue
 
-      if(datasetArray1[j].key[1] === "1"){
-        a_region_object.förstaDos.push({
-          age: makeNumberAgeInData(datasetArray1[j].key[2]),
-          value: datasetArray1[j].values
-        })
-      }
+      if (dataset[j].key[1] === "1"){
+          region_object.forstaDos.push({
+            age: keyValue(dataset[j].key[2]),
+            value: dataset[j].values
+          })
+        }
 
-      if(datasetArray1[j].key[1] === "2"){
-        a_region_object.påfyllnadsdos.push({
-          age: makeNumberAgeInData(datasetArray1[j].key[2]),
-          value: datasetArray1[j].values
+      if (dataset[j].key[1] === "2"){
+        region_object.påfyllnadsdos.push({
+          age: keyValue(dataset[j].key[2]),
+          value: dataset[j].values
         })
       }
       
     }
-    newDataSetFormated.push(a_region_object)
+    sendData.push(region_object)
   }
 
+  sendData.reverse()
+  return sendData;
+}
 
+export async function formatPopulation(){
 
-  return newDataSetFormated;
+  let rawData = await d3.json("./API/data_population.json")
+  let data = rawData.data
+  let sendData = [];
+
+    for(let i = 0; i < data.length; i++){
+  
+      let kommun = {
+        kommun : data[i].key[0],
+        value: data[i].values[0]
+      };
+
+    sendData.push(kommun)
+
+  }
+
+ return sendData;
+}
+
+export async function formatKommun(){
+
+  let data = await d3.csv("./API/kommunlankod.csv")
+  console.log(data)
+  return data;
 }

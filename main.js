@@ -1,7 +1,6 @@
 import {formatData} from "./formatData.js"
 import { getColor } from "./colorize.js";
 
-
 // let data =d3.scv("...")
 
 export async function getKommunID () {
@@ -24,7 +23,6 @@ function createSVG (){
   let gVizButtonsContainer = d3.select("svg")
     .append("g")
     .attr("transform", "translate(250, 100)");
-  
 
   let rubrikMinst1Dos = d3.select("svg").append("text")
   .text("Minst 1 Dos")
@@ -49,11 +47,10 @@ function createSVG (){
     .attr("height", 35)
     .attr("fill", "grey")
     .on("click", (i, d) => {
-      //console.log("clicked", d)
       getData("förstaDos", d)
     });
 
-    
+ 
   let gVizbuttons2 = gVizButtonsContainer.selectAll("rect2")
   .data(buttonData)
   .enter()
@@ -64,11 +61,8 @@ function createSVG (){
   .attr("height", 35)
   .attr("fill", "grey")
   .on("click", (i, d) => {
-    //console.log("clicked", d)
     getData("andraDos", d)
   });
-
-
 
   
   gVizButtonsContainer.selectAll("textfirst")
@@ -89,7 +83,6 @@ function createSVG (){
     .style("cursor", "pointer")
     .style("user-select", "none") 
     .on("click", (i, d) => {
-      //console.log("clicked", d)
       getData("förstaDos", d)
       
     });
@@ -113,11 +106,17 @@ function createSVG (){
   .style("cursor", "pointer")
   .style("user-select", "none") 
   .on("click", (i, d) => {
-  
     getData("andraDos", d)
-    console.log(d)
   });
 
+
+      let legend = d3.select("svg").append("g")
+                                  .classed("legend", true)
+                                  .append("rect")
+                                        .attr("width", 200)
+                                        .attr("height", 10)
+                                        .attr("x", 400)
+                                        .attr("y", 70) 
   
 
 // let buttons = gVizbuttons.selectAll("button")
@@ -140,28 +139,58 @@ function createSVG (){
 
 }
 
+function createLegend(){
+  d3.select("legend")
+    .style("fill", "red")
+}
 
-async function getData(akutellDosEller1Dos, åldersgrupp){
-   const dataset = await formatData()
 
-   let sendData = []
+async function getData(dos, åldersgrupp){
+
+  const dataset = await formatData()
+
+  let sendData = []
+  let highestValue = dataset[0].forstaDos[0].value;
+  let lowestValue = dataset[0].forstaDos[0].value;
 
    dataset.forEach(data => {
-    if(akutellDosEller1Dos === "förstaDos"){
-      data.förstaDos.forEach( value => {
+
+    if(dos === "förstaDos"){
+      data.forstaDos.forEach( value => {
+
         if (value.age === åldersgrupp){
+
+            if (value.value < lowestValue) {
+              lowestValue = value.value;
+            }
+
+            if (value.value > highestValue) {
+              highestValue = value.value;
+            } 
+
           let Data = {
             "id" : data.id,
             "value": value.value
-          } 
-            
+          }            
             sendData.push(Data)
+            
         } 
       })
-    }
-    if(akutellDosEller1Dos === "andraDos") {
+    } 
+
+    if(dos === "andraDos") {
       data.påfyllnadsdos.forEach( value => {
+
         if (value.age === åldersgrupp){
+
+          if (value.value < lowestValue) {
+              lowestValue = value.value;
+            }
+
+          if (value.value > highestValue) {
+              highestValue = value.value;
+            } 
+
           let Data = {
             "id" : data.id,
             "value": value.value
@@ -173,14 +202,25 @@ async function getData(akutellDosEller1Dos, åldersgrupp){
     }
   })
 
-  if(akutellDosEller1Dos === "förstaDos"){
-    getColor(sendData,"förstDos" )
+  if(dos === "förstaDos"){
+   
+    let maxNmin = {
+      "max" : parseInt(highestValue[0]),
+      "min": parseInt(lowestValue[0]),
+    }
+    getColor(sendData,"förstDos", maxNmin)
+    
   }
 
-  if(akutellDosEller1Dos === "andraDos"){
-    getColor(sendData,"andraDos" )
+  if(dos === "andraDos"){
+
+      let maxNmin = {
+        "max" : parseInt(highestValue[0]),
+        "min": parseInt(lowestValue[0])
+    }
+    getColor(sendData,"andraDos", maxNmin)
   }
 }
 
-
 createSVG()
+createLegend()
