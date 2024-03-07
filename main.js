@@ -1,7 +1,12 @@
 import { formatData } from "./formatData.js"
 import { getColor } from "./colorize.js";
 
-// let data =d3.scv("...")
+async function logCsvData(fileLocation){
+  let dataFormatedJS = await d3.csv(fileLocation);
+  console.log(dataFormatedJS);
+}
+
+logCsvData("./API/kommunlankod.csv")
 
 export async function getKommunID() {
 
@@ -129,13 +134,13 @@ function createSVG() {
   async function getData(dos, åldersgrupp) {
 
     const dataset = await formatData()
-
+    console.log(dataset)
     let sendData = []
     let highestValue = dataset[0].forstaDos[0].value;
     let lowestValue = dataset[0].forstaDos[0].value;
 
     dataset.forEach(data => {
-
+      
       if (dos === "förstaDos") {
         data.forstaDos.forEach(value => {
 
@@ -151,7 +156,8 @@ function createSVG() {
 
             let Data = {
               "id": data.id,
-              "value": value.value
+              "value": value.value,
+              "population": data.population
             }
             sendData.push(Data)
 
@@ -174,7 +180,8 @@ function createSVG() {
 
             let Data = {
               "id": data.id,
-              "value": value.value
+              "value": value.value,
+              "population": data.population
             }
 
             sendData.push(Data)

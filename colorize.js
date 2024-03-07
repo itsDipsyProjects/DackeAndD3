@@ -4,9 +4,9 @@ export async function getColor(data, akutellDosEller1Dos, maxNmin){
     let min = maxNmin.min;
     let middle = Math.round(min + max) / 2
 
-    console.log("max value:",max)
-    console.log("min value:", min)
-    console.log("middle value", middle)
+    // console.log("max value:",max)
+    // console.log("min value:", min)
+    // console.log("middle value", middle)
 
     const colorScale = d3.scaleLinear([min, max], ["yellow", "darkgreen"])
 
@@ -20,7 +20,7 @@ export async function getColor(data, akutellDosEller1Dos, maxNmin){
         data.forEach((item, i) => {
             const node = d3.select(`#x${item.id}`)
             .on("mouseover", (e) =>  {
-
+                console.log(item)
                 d3.select("svg").append("g").classed("hoverGroupd",true)
                 .append("rect")
                 .attr("width", 100)
@@ -33,7 +33,7 @@ export async function getColor(data, akutellDosEller1Dos, maxNmin){
                 .attr("fill", "white")
                 .attr("x", `${e.clientX - 135}`)
                 .attr("y", `${e.clientY + 30}`)
-                .text(`${item.value}%`)
+                .text(`${item.population}`)
             })
             .on("mouseleave", (e) =>{
                 d3.selectAll(".hoverGroupd").remove();
