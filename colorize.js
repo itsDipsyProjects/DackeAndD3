@@ -41,7 +41,7 @@ let { max, middle, min} = maxNmin
                 .attr("fill", "white")
                 .attr("x", `${e.clientX - 155}`)
                 .attr("y", `${e.clientY + 20}`)
-                .text(`${item.value[0]}%`);
+                .text(`${item.value}%`);
 
                 d3.select("svg").append("g").classed("hoverGroupd",true)
                 .append("text")
@@ -88,7 +88,7 @@ let { max, middle, min} = maxNmin
                     .attr("fill", "white")
                     .attr("x", `${e.clientX - 155}`)
                     .attr("y", `${e.clientY + 20}`)
-                    .text(`${item.value[0]}%`);
+                    .text(`${item.value}%`);
 
                     d3.select("svg").append("g").classed("hoverGroupd",true)
                     .append("text")

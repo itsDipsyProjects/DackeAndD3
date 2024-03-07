@@ -35,7 +35,7 @@ function createSVG (){
                                           .attr("height", 35)
                                           .attr("fill", "grey")
                                           .on("click", (i, d) => {
-                                            getData("förstaDos", d)
+                                            getData("firstDos", d)
                                           });
 
  
@@ -49,7 +49,7 @@ function createSVG (){
                                           .attr("height", 35)
                                           .attr("fill", "grey")
                                           .on("click", (i, d) => {
-                                            getData("andraDos", d)
+                                            getData("latestDos", d)
                                           });
 
 
@@ -152,15 +152,13 @@ console.log(maxNmin)
 
 }
 
-  async function getData(dos, agegroup) {
+async function getData(dos, agegroup) {
 
-    const dataset = await formatData()
-    console.log(dataset)
-    let sendData = []
-
-    let highestValue = dataset[0].firstDos[0].value;
-    let lowestValue = dataset[0].firstDos[0].value;
-
+  const dataset = await formatData()
+    
+  let sendData = [];
+  let highestValue = 0;
+  let lowestValue = 100;
 
     dataset.forEach(data => {
       
@@ -169,13 +167,8 @@ console.log(maxNmin)
 
           if (value.age === agegroup) {
 
-            if (value.value < lowestValue) {
-              lowestValue = value.value;
-              }
-
-            if (value.value > highestValue) {
-              highestValue = value.value;
-              }
+            highestValue = Math.max(highestValue, value.value);
+            lowestValue = Math.min(lowestValue, value.value);
 
             let Data = {
               "id": data.id,
@@ -189,18 +182,13 @@ console.log(maxNmin)
         })
       }
 
-      if (dos === "latestdos") {
+      if (dos === "latestDos") {
         data.latestDos.forEach(value => {
 
           if (value.age === agegroup) {
 
-            if (value.value < lowestValue) {
-              lowestValue = value.value;
-              }
-
-            if (value.value > highestValue) {
-              highestValue = value.value;
-              }
+            highestValue = Math.max(highestValue, value.value);
+            lowestValue = Math.min(lowestValue, value.value);
 
             let Data = {
               "id": data.id,
@@ -217,8 +205,8 @@ console.log(maxNmin)
 
   if(dos === "firstDos"){
 
-    let max =  parseInt(highestValue[0]);
-    let min = parseInt(lowestValue[0]);
+    let max =  highestValue;
+    let min = lowestValue;
     let middle = Math.round(min + max) / 2;
    
     let maxNmin = {
@@ -233,16 +221,16 @@ console.log(maxNmin)
 
   if(dos === "latestDos"){
 
-    let max =  parseInt(highestValue[0]);
-    let min = parseInt(lowestValue[0]);
+    let max = highestValue;
+    let min = lowestValue;
     let middle = Math.round(min + max) / 2;
 
       let maxNmin = {
         "max" : max,
         "middle": middle,
-        "min": min,
-        
+        "min": min,   
     }
+
     getColor(sendData,"latestDos", maxNmin)
   }
 }
