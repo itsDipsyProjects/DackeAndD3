@@ -176,7 +176,8 @@ function createSVG() {
             let Data = {
               "id": data.id,
               "value": value.value,
-              "population": data.population
+              "population": data.population,
+              "kommunNamn": data.kommunNamn,
             }
 
             sendData.push(Data)
