@@ -6,9 +6,17 @@ body{
 }
 
 .divForButtonsFirst{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
+.divForButtonsFirst > button{
+    margin-left: 20px;
+}
+
+
 .divForButtonsSecond{
-    
+}
+
+.divForButtonsSecond > button{
+    margin-left: 20px;
 }

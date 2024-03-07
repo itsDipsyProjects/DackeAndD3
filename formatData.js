@@ -8,7 +8,6 @@ export async function formatData(){
 
   let datasetArray = await d3.json("./API/realData.json")
   let dataset = datasetArray.data;  
-  console.log(dataset)
   
   function keyValue(a_number_string){
 
@@ -64,7 +63,6 @@ export async function formatData(){
     sendDataInstance.population = population[k].value
     sendDataInstance.kommunNamn = kommunNamn[k].kommunNamn
   }
-  console.log(sendData)
   sendData.reverse()
   return sendData;
 }
