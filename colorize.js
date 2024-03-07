@@ -23,7 +23,7 @@ export async function getColor(data, akutellDosEller1Dos){
                 .append("text")
                 .attr("fill", "white")
                 .attr("x", `${e.clientX - 135}`)
-                .attr("y", `${e.clientY + 30}`)
+                .attr("y", `${e.clientY + 45}`)
                 .text(`${item.value}%`)
             })
             .on("mouseleave", (e) =>{
