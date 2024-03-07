@@ -142,6 +142,7 @@ function createSVG (){
 function createLegend(){
   d3.select("legend")
     .style("fill", "red")
+    console.log("inne")
 }
 
 
@@ -223,4 +224,3 @@ async function getData(dos, åldersgrupp){
 }
 
 createSVG()
-createLegend()
