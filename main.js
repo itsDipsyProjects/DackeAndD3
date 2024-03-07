@@ -8,96 +8,6 @@ function createSVG (){
 
   let svg = d3.select("svg")
 
-  let gVizButtonsContainer = svg
-                            .append("g")
-                            .attr("transform", "translate(250, 100)");
-
-  let rubrikMinst1Dos = d3.select("svg").append("text")
-                                        .text("Minst 1 Dos")
-                                        .attr("x", 344) 
-                                        .attr("y", 280) 
-                                        .style("font-size", 30)
-
-  let rubrikAktuellPåFyllnadsDos = d3.select("svg").append("text")
-                                                    .text("Aktuell påfyllnads dos")
-                                                    .attr("x", 284) 
-                                                    .attr("y", 500) 
-                                                    .style("font-size", 30)
-
-
-  let gVizbuttons = gVizButtonsContainer.selectAll("rect1")
-                                          .data(buttonData)
-                                          .enter()
-                                          .append("rect")
-                                          .attr("x", (d, i) => i * 90) 
-                                          .attr("y", 250) 
-                                          .attr("width", 70)
-                                          .attr("height", 35)
-                                          .attr("fill", "grey")
-                                          .on("click", (i, d) => {
-                                            getData("firstDos", d)
-                                          });
-
- 
-  let gVizbuttons2 = gVizButtonsContainer.selectAll("rect2")
-                                          .data(buttonData)
-                                          .enter()
-                                          .append("rect")
-                                          .attr("x", (d, i) => i * 90) 
-                                          .attr("y", 500) 
-                                          .attr("width", 70)
-                                          .attr("height", 35)
-                                          .attr("fill", "grey")
-                                          .on("click", (i, d) => {
-                                            getData("latestDos", d)
-                                          });
-
-
-
-  gVizButtonsContainer.selectAll("textfirst")
-                      .data(buttonData)
-                      .enter()
-                      .append("text")
-                      .attr("fill", "white")
-                      .attr("x", (d, i) => {
-                        let previous = incrementor_x_text1;
-                        incrementor_x_text1 += 20
-                        return (i * 70) + previous
-                      }) 
-                      .attr("y", 270)
-                      .attr("text-anchor", "middle") 
-                      .attr("alignment-baseline", "middle") 
-                      .text(d => d + "år") 
-                      .style("font-size", 15)
-                      .style("cursor", "pointer")
-                      .style("user-select", "none") 
-                      .on("click", (i, d) => {
-                        getData("firstDos", d)
-
-                      });
-
-
-  gVizButtonsContainer.selectAll("textfirst")
-                      .data(buttonData)
-                      .enter()
-                      .append("text")
-                      .attr("fill", "white")
-                      .attr("x", (d, i) => {
-                        let previous = incrementor_x_text2;
-                        incrementor_x_text2 += 20
-                        return (i * 70) + previous
-                      }) 
-                      .attr("y", 520)
-                      .attr("text-anchor", "middle")
-                      .attr("alignment-baseline", "middle") 
-                      .text(d => d + "år") 
-                      .style("font-size", 15)
-                      .style("cursor", "pointer")
-                      .style("user-select", "none") 
-                      .on("click", (i, d) => {
-                        getData("latestDos", d)
-                      });
-
 
 const defaultV = [0, 50, 100];
 
@@ -158,7 +68,6 @@ export function UpdateLegend(maxNmin, color){
   let rect = d3.select(".gradient rect")
           .style("fill", "url(#myGradient)")
 
-  console.log(maxNmin)
 
   let textElement = d3.select(".gradient").selectAll("text")
                                         .data(maxNmin)                                                                  
@@ -166,8 +75,8 @@ export function UpdateLegend(maxNmin, color){
 
 }
 
-async function getData(dos, agegroup) {
-
+export async function getData(dos, agegroup) {
+ console.log("hello")
   const dataset = await formatData()
     
   let sendData = [];
@@ -175,7 +84,6 @@ async function getData(dos, agegroup) {
   let lowestValue = 101;
 
     dataset.forEach(data => {
-      
       if (dos === "firstDos") {
         data.firstDos.forEach(value => {
 
@@ -218,7 +126,6 @@ async function getData(dos, agegroup) {
     })
 
   if(dos === "firstDos"){
-
     let max =  highestValue;
     let min = lowestValue;
     let middle = Math.round(min + max) / 2;
