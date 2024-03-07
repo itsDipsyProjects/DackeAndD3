@@ -1,25 +1,27 @@
 
+import { UpdateLegend } from "./main.js"
+
 
 export async function getColor(data, akutellDosEller1Dos, maxNmin){
-    
-    let max = maxNmin.max;
-    let min = maxNmin.min;
-    let middle = Math.round(min + max) / 2
+
+let { max, middle, min} = maxNmin
 
     console.log("max value:",max)
     console.log("min value:", min)
     console.log("middle value", middle)
 
-    const colorScale = d3.scaleLinear([min, max], ["yellow", "darkgreen"])
+    const colorScale = d3.scaleLinear([max, min], ["yellow", "darkgreen"])
 
-    let minColor = colorScale(min)
-    let maxColor = colorScale(max)
-    let middleColor = colorScale(middle)  
+    let colors = [
+       { offset: "0", color: colorScale(min)},
+       { offset: "50%", color: colorScale(middle)},
+       {offset: "100%", color: colorScale(max)}
+    ]
+
+    let minmax = [min, max, middle]
+
+    UpdateLegend(minmax, colors)
     
-    //let legend = d3.legend()
-    //    .style("")
-
-
 
     if(akutellDosEller1Dos === "förstDos"){
         data.forEach((item, i) => {
