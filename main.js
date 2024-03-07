@@ -1,12 +1,6 @@
 import { formatData } from "./formatData.js"
 import { getColor } from "./colorize.js";
 
-async function logCsvData(fileLocation){
-  let dataFormatedJS = await d3.csv(fileLocation);
-  console.log(dataFormatedJS);
-}
-
-logCsvData("./API/kommunlankod.csv")
 
 export async function getKommunID() {
 
@@ -157,7 +151,8 @@ function createSVG() {
             let Data = {
               "id": data.id,
               "value": value.value,
-              "population": data.population
+              "population": data.population,
+              "kommunNamn": data.kommunNamn,
             }
             sendData.push(Data)
 

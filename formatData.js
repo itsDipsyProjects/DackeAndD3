@@ -2,6 +2,9 @@
 export async function formatData(){
 
   let population = await formatPopulation() 
+  let kommunNamn = await formatKommun()
+  
+
 
   let datasetArray = await d3.json("./API/data_vaccination.json")
   let dataset = datasetArray.data;  
@@ -53,8 +56,9 @@ export async function formatData(){
   for (let k = 0; k < sendData.length; k++) {
     let sendDataInstance = sendData[k];
     sendDataInstance.population = population[k].value
+    sendDataInstance.kommunNamn = kommunNamn[k].kommunNamn
   }
-  
+ 
   sendData.reverse()
   return sendData;
 }
@@ -82,7 +86,6 @@ export async function formatPopulation(){
 
 export async function formatKommun(){
 
-  let data = await d3.csv("./API/kommunlankod.csv")
-  console.log(data)
+  let data = await d3.json("./API/kommunlanData3.json")
   return data;
 }
