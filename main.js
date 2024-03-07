@@ -106,18 +106,32 @@ const defaultV = [0, 50, 100];
 
   let rectLegend = legend
                   .append("rect")
+                  .classed("legend", true)
                   .attr("transform", "translate(340, 130)")
                   .attr("width", 220)
                   .attr("height", 10)
-                  .style("border", "1px solid black")
-
+                  .style("fill", "white")
+                  .style("stroke", "black")
+                  .style("stroke-width", "0.2px")
+                  ;
+                  
+ // let ticks = legend.selectAll("line")
+ //                   .data(defaultV)
+ //                   .enter()
+ //                   .append("line")
+ //                   .attr("x1", (d, i) => i * 100 + 350)
+ //                   .attr("x2", (d, i) => i * 100 + 350)
+ //                   .attr("y1", 150) 
+ //                   .attr("y2", 160) 
+ //                   .style("stroke", "black");
+//
   let textLegend = legend.selectAll("text")
                   .data(defaultV)
                   .enter()
                   .append("text")
-                  .attr("x", (d, i) => { return i * 100 + 340; }) 
+                  .attr("x", (d, i) => { return i * 100 + 335; }) 
                   .attr("y", 160)
-                  .text(d => d)
+                  .text(d => d + "%")
 
           
 
@@ -133,6 +147,7 @@ const defaultV = [0, 50, 100];
 export function UpdateLegend(maxNmin, color){
 
   let legend = d3.select("#myGradient");
+
   legend.selectAll("stop")
         .data(color)
         .enter()
@@ -140,15 +155,14 @@ export function UpdateLegend(maxNmin, color){
         .attr("offset", (d, i) => { return d.offset; })
         .attr("stop-color", (d, i) => { return d.color; });
 
-let rect = d3.select(".gradient rect")
+  let rect = d3.select(".gradient rect")
           .style("fill", "url(#myGradient)")
 
-console.log(maxNmin)
+  console.log(maxNmin)
 
-  let textLegend = legend.selectAll("text")
-                    .data(maxNmin)
-                    .enter()
-                    .text(d => d)
+  let textElement = d3.select(".gradient").selectAll("text")
+                                        .data(maxNmin)                                                                  
+                                        .text(d => d + "%")     
 
 }
 
@@ -158,7 +172,7 @@ async function getData(dos, agegroup) {
     
   let sendData = [];
   let highestValue = 0;
-  let lowestValue = 100;
+  let lowestValue = 101;
 
     dataset.forEach(data => {
       
