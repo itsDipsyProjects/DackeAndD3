@@ -2,6 +2,9 @@
 export async function formatData(){
 
   let population = await formatPopulation() 
+  let kommunNamn = await formatKommun()
+  
+
 
   let datasetArray = await d3.json("./API/data_vaccination.json")
   let dataset = datasetArray.data;  
@@ -23,17 +26,14 @@ export async function formatData(){
   let sendData = [];
 
   for (let i = 0; i < dataset.length; i += 6) {
-    
-    let pValue = (population.find(item => item.id === dataset[i].id)).value;
-    
+        
     let region_object = {};
     region_object.forstaDos = [];
     region_object.påfyllnadsdos = [];
-       
+    
     
     for (let j = i; j < i + 6; j++) { 
       region_object.id = dataset[j].key[0];
-      region_object.population = pValue
 
       if (dataset[j].key[1] === "1"){
           region_object.forstaDos.push({
@@ -53,6 +53,12 @@ export async function formatData(){
     sendData.push(region_object)
   }
 
+  for (let k = 0; k < sendData.length; k++) {
+    let sendDataInstance = sendData[k];
+    sendDataInstance.population = population[k].value
+    sendDataInstance.kommunNamn = kommunNamn[k].kommunNamn
+  }
+ 
   sendData.reverse()
   return sendData;
 }
@@ -60,6 +66,7 @@ export async function formatData(){
 export async function formatPopulation(){
 
   let rawData = await d3.json("./API/data_population.json")
+  
   let data = rawData.data
   let sendData = [];
 
@@ -79,7 +86,6 @@ export async function formatPopulation(){
 
 export async function formatKommun(){
 
-  let data = await d3.csv("./API/kommunlankod.csv")
-  console.log(data)
+  let data = await d3.json("./API/kommunlanData3.json")
   return data;
 }

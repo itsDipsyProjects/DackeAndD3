@@ -1,0 +1,1742 @@
+[
+ {
+  "kommunId": "0114",
+  "kommunNamn": "Upplands Väsby",
+  "Column3": 75.26805424156417,
+  "Column4": 79.4
+ },
+ {
+  "kommunId": "0115",
+  "kommunNamn": "Vallentuna",
+  "Column3": 82.25507633022085,
+  "Column4": 87.2
+ },
+ {
+  "kommunId": "0117",
+  "kommunNamn": "Österåker",
+  "Column3": 84.13315579227697,
+  "Column4": 85.4
+ },
+ {
+  "kommunId": "0120",
+  "kommunNamn": "Värmdö",
+  "Column3": 81.85251060336572,
+  "Column4": 87.6
+ },
+ {
+  "kommunId": "0123",
+  "kommunNamn": "Järfälla",
+  "Column3": 74.93859368087021,
+  "Column4": 81.6
+ },
+ {
+  "kommunId": "0125",
+  "kommunNamn": "Ekerö",
+  "Column3": 81.63908239783467,
+  "Column4": 89.1
+ },
+ {
+  "kommunId": "0126",
+  "kommunNamn": "Huddinge",
+  "Column3": 72.91147963720434,
+  "Column4": 79
+ },
+ {
+  "kommunId": "0127",
+  "kommunNamn": "Botkyrka",
+  "Column3": 62.9117216068859,
+  "Column4": 71.4
+ },
+ {
+  "kommunId": "0128",
+  "kommunNamn": "Salem",
+  "Column3": 77.14071294559099,
+  "Column4": 84.2
+ },
+ {
+  "kommunId": "0136",
+  "kommunNamn": "Haninge",
+  "Column3": 71.52790778529592,
+  "Column4": 78.3
+ },
+ {
+  "kommunId": "0138",
+  "kommunNamn": "Tyresö",
+  "Column3": 79.72858788887467,
+  "Column4": 86.8
+ },
+ {
+  "kommunId": "0139",
+  "kommunNamn": "Upplands-Bro",
+  "Column3": 74.46012940089068,
+  "Column4": 81.7
+ },
+ {
+  "kommunId": "0140",
+  "kommunNamn": "Nykvarn",
+  "Column3": 83.11453146220009,
+  "Column4": 87.7
+ },
+ {
+  "kommunId": "0160",
+  "kommunNamn": "Täby",
+  "Column3": 86.57071467688937,
+  "Column4": 88.7
+ },
+ {
+  "kommunId": "0162",
+  "kommunNamn": "Danderyd",
+  "Column3": 85.34689678820436,
+  "Column4": 90.2
+ },
+ {
+  "kommunId": "0163",
+  "kommunNamn": "Sollentuna",
+  "Column3": 80.45982853851108,
+  "Column4": 84.5
+ },
+ {
+  "kommunId": "0180",
+  "kommunNamn": "Stockholm",
+  "Column3": 78.20049502504767,
+  "Column4": 83.5
+ },
+ {
+  "kommunId": "0181",
+  "kommunNamn": "Södertälje",
+  "Column3": 65.25222333831492,
+  "Column4": 69.9
+ },
+ {
+  "kommunId": "0182",
+  "kommunNamn": "Nacka",
+  "Column3": 82.40919594714701,
+  "Column4": 86.4
+ },
+ {
+  "kommunId": "0183",
+  "kommunNamn": "Sundbyberg",
+  "Column3": 75.0402539448866,
+  "Column4": 80.6
+ },
+ {
+  "kommunId": "0184",
+  "kommunNamn": "Solna",
+  "Column3": 78.81617720329693,
+  "Column4": 82.5
+ },
+ {
+  "kommunId": "0186",
+  "kommunNamn": "Lidingö",
+  "Column3": 83.70154338512363,
+  "Column4": 87.9
+ },
+ {
+  "kommunId": "0187",
+  "kommunNamn": "Vaxholm",
+  "Column3": 86.02339786727404,
+  "Column4": 90.7
+ },
+ {
+  "kommunId": "0188",
+  "kommunNamn": "Norrtälje",
+  "Column3": 84.47412353923205,
+  "Column4": 84.5
+ },
+ {
+  "kommunId": "0191",
+  "kommunNamn": "Sigtuna",
+  "Column3": 70.96257907171709,
+  "Column4": 76.8
+ },
+ {
+  "kommunId": "0192",
+  "kommunNamn": "Nynäshamn",
+  "Column3": 76.68701326036624,
+  "Column4": 82
+ },
+ {
+  "kommunId": "0305",
+  "kommunNamn": "Håbo",
+  "Column3": 84.81666477466227,
+  "Column4": 85.9
+ },
+ {
+  "kommunId": "0319",
+  "kommunNamn": "Älvkarleby",
+  "Column3": 86.78667177326695,
+  "Column4": 85.3
+ },
+ {
+  "kommunId": "0330",
+  "kommunNamn": "Knivsta",
+  "Column3": 89.14336500991318,
+  "Column4": 88.7
+ },
+ {
+  "kommunId": "0331",
+  "kommunNamn": "Heby",
+  "Column3": 86.13194681213774,
+  "Column4": 83.9
+ },
+ {
+  "kommunId": "0360",
+  "kommunNamn": "Tierp",
+  "Column3": 86.56597774244833,
+  "Column4": 85.3
+ },
+ {
+  "kommunId": "0380",
+  "kommunNamn": "Uppsala",
+  "Column3": 86.33460849453539,
+  "Column4": 86.4
+ },
+ {
+  "kommunId": "0381",
+  "kommunNamn": "Enköping",
+  "Column3": 86.91004812677816,
+  "Column4": 85.2
+ },
+ {
+  "kommunId": "0382",
+  "kommunNamn": "Östhammar",
+  "Column3": 89.80116833699554,
+  "Column4": 85.1
+ },
+ {
+  "kommunId": "0428",
+  "kommunNamn": "Vingåker",
+  "Column3": 85.2991452991453,
+  "Column4": 86.2
+ },
+ {
+  "kommunId": "0461",
+  "kommunNamn": "Gnesta",
+  "Column3": 81.67578585988628,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "0480",
+  "kommunNamn": "Nyköping",
+  "Column3": 85.83216067545094,
+  "Column4": 86.3
+ },
+ {
+  "kommunId": "0481",
+  "kommunNamn": "Oxelösund",
+  "Column3": 85.26952141057934,
+  "Column4": 84
+ },
+ {
+  "kommunId": "0482",
+  "kommunNamn": "Flen",
+  "Column3": 80.00292354918872,
+  "Column4": 82.1
+ },
+ {
+  "kommunId": "0483",
+  "kommunNamn": "Katrineholm",
+  "Column3": 85.15095069061259,
+  "Column4": 84.7
+ },
+ {
+  "kommunId": "0484",
+  "kommunNamn": "Eskilstuna",
+  "Column3": 80.38241753187772,
+  "Column4": 81.2
+ },
+ {
+  "kommunId": "0486",
+  "kommunNamn": "Strängnäs",
+  "Column3": 83.84921548633268,
+  "Column4": 84.7
+ },
+ {
+  "kommunId": "0488",
+  "kommunNamn": "Trosa",
+  "Column3": 84.2905982905983,
+  "Column4": 87.5
+ },
+ {
+  "kommunId": "0509",
+  "kommunNamn": "Ödeshög",
+  "Column3": 85.10015755120413,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "0512",
+  "kommunNamn": "Ydre",
+  "Column3": 86.94963573012353,
+  "Column4": 88.3
+ },
+ {
+  "kommunId": "0513",
+  "kommunNamn": "Kinda",
+  "Column3": 89.78759150366015,
+  "Column4": 87.3
+ },
+ {
+  "kommunId": "0560",
+  "kommunNamn": "Boxholm",
+  "Column3": 89.38997821350763,
+  "Column4": 86.8
+ },
+ {
+  "kommunId": "0561",
+  "kommunNamn": "Åtvidaberg",
+  "Column3": 89.73769463893824,
+  "Column4": 87.9
+ },
+ {
+  "kommunId": "0562",
+  "kommunNamn": "Finspång",
+  "Column3": 85.49546560495466,
+  "Column4": 85.5
+ },
+ {
+  "kommunId": "0563",
+  "kommunNamn": "Valdemarsvik",
+  "Column3": 86.74425634824668,
+  "Column4": 86.6
+ },
+ {
+  "kommunId": "0580",
+  "kommunNamn": "Linköping",
+  "Column3": 86.99248451398879,
+  "Column4": 86.6
+ },
+ {
+  "kommunId": "0581",
+  "kommunNamn": "Norrköping",
+  "Column3": 82.55931669885237,
+  "Column4": 83.7
+ },
+ {
+  "kommunId": "0582",
+  "kommunNamn": "Söderköping",
+  "Column3": 89.27139037433155,
+  "Column4": 88.1
+ },
+ {
+  "kommunId": "0583",
+  "kommunNamn": "Motala",
+  "Column3": 86.89441337688943,
+  "Column4": 85.9
+ },
+ {
+  "kommunId": "0584",
+  "kommunNamn": "Vadstena",
+  "Column3": 91.15540330115229,
+  "Column4": 87.3
+ },
+ {
+  "kommunId": "0586",
+  "kommunNamn": "Mjölby",
+  "Column3": 88.0655737704918,
+  "Column4": 86.3
+ },
+ {
+  "kommunId": "0604",
+  "kommunNamn": "Aneby",
+  "Column3": 86.028880866426,
+  "Column4": 87.5
+ },
+ {
+  "kommunId": "0617",
+  "kommunNamn": "Gnosjö",
+  "Column3": 81.92786385572771,
+  "Column4": 81.5
+ },
+ {
+  "kommunId": "0642",
+  "kommunNamn": "Mullsjö",
+  "Column3": 85.3175922846691,
+  "Column4": 87.3
+ },
+ {
+  "kommunId": "0643",
+  "kommunNamn": "Habo",
+  "Column3": 87.51835535976505,
+  "Column4": 91
+ },
+ {
+  "kommunId": "0662",
+  "kommunNamn": "Gislaved",
+  "Column3": 80.74998966386902,
+  "Column4": 81.1
+ },
+ {
+  "kommunId": "0665",
+  "kommunNamn": "Vaggeryd",
+  "Column3": 81.42685645686846,
+  "Column4": 85
+ },
+ {
+  "kommunId": "0680",
+  "kommunNamn": "Jönköping",
+  "Column3": 82.52163946765198,
+  "Column4": 85.2
+ },
+ {
+  "kommunId": "0682",
+  "kommunNamn": "Nässjö",
+  "Column3": 82.14453125,
+  "Column4": 84.7
+ },
+ {
+  "kommunId": "0683",
+  "kommunNamn": "Värnamo",
+  "Column3": 83.43349147777192,
+  "Column4": 85.1
+ },
+ {
+  "kommunId": "0684",
+  "kommunNamn": "Sävsjö",
+  "Column3": 79.88165680473372,
+  "Column4": 83.9
+ },
+ {
+  "kommunId": "0685",
+  "kommunNamn": "Vetlanda",
+  "Column3": 84.5031055900621,
+  "Column4": 85.1
+ },
+ {
+  "kommunId": "0686",
+  "kommunNamn": "Eksjö",
+  "Column3": 85.1726242962762,
+  "Column4": 85.3
+ },
+ {
+  "kommunId": "0687",
+  "kommunNamn": "Tranås",
+  "Column3": 86.31302789864345,
+  "Column4": 85.4
+ },
+ {
+  "kommunId": "0760",
+  "kommunNamn": "Uppvidinge",
+  "Column3": 79.67791411042946,
+  "Column4": 82.3
+ },
+ {
+  "kommunId": "0761",
+  "kommunNamn": "Lessebo",
+  "Column3": 81.34349827387803,
+  "Column4": 84.5
+ },
+ {
+  "kommunId": "0763",
+  "kommunNamn": "Tingsryd",
+  "Column3": 83.11251920122888,
+  "Column4": 82.9
+ },
+ {
+  "kommunId": "0764",
+  "kommunNamn": "Alvesta",
+  "Column3": 80.94062461424517,
+  "Column4": 85.2
+ },
+ {
+  "kommunId": "0765",
+  "kommunNamn": "Älmhult",
+  "Column3": 82.3025623025623,
+  "Column4": 83.2
+ },
+ {
+  "kommunId": "0767",
+  "kommunNamn": "Markaryd",
+  "Column3": 76.85824651761676,
+  "Column4": 80.2
+ },
+ {
+  "kommunId": "0780",
+  "kommunNamn": "Växjö",
+  "Column3": 83.48446097806712,
+  "Column4": 86.6
+ },
+ {
+  "kommunId": "0781",
+  "kommunNamn": "Ljungby",
+  "Column3": 79.8108986534971,
+  "Column4": 82.4
+ },
+ {
+  "kommunId": "0821",
+  "kommunNamn": "Högsby",
+  "Column3": 77.20588235294117,
+  "Column4": 81.2
+ },
+ {
+  "kommunId": "0834",
+  "kommunNamn": "Torsås",
+  "Column3": 82.87182888409882,
+  "Column4": 85.9
+ },
+ {
+  "kommunId": "0840",
+  "kommunNamn": "Mörbylånga",
+  "Column3": 90.20846493998737,
+  "Column4": 89.7
+ },
+ {
+  "kommunId": "0860",
+  "kommunNamn": "Hultsfred",
+  "Column3": 81.37021276595745,
+  "Column4": 82.4
+ },
+ {
+  "kommunId": "0861",
+  "kommunNamn": "Mönsterås",
+  "Column3": 82.62206148282097,
+  "Column4": 86.2
+ },
+ {
+  "kommunId": "0862",
+  "kommunNamn": "Emmaboda",
+  "Column3": 83.18291597813652,
+  "Column4": 83.3
+ },
+ {
+  "kommunId": "0880",
+  "kommunNamn": "Kalmar",
+  "Column3": 86.90197563158257,
+  "Column4": 86.9
+ },
+ {
+  "kommunId": "0881",
+  "kommunNamn": "Nybro",
+  "Column3": 83.82598331346841,
+  "Column4": 83.1
+ },
+ {
+  "kommunId": "0882",
+  "kommunNamn": "Oskarshamn",
+  "Column3": 84.0400106222891,
+  "Column4": 86.1
+ },
+ {
+  "kommunId": "0883",
+  "kommunNamn": "Västervik",
+  "Column3": 87.4017776632745,
+  "Column4": 84.4
+ },
+ {
+  "kommunId": "0884",
+  "kommunNamn": "Vimmerby",
+  "Column3": 84.09629346580053,
+  "Column4": 86.3
+ },
+ {
+  "kommunId": "0885",
+  "kommunNamn": "Borgholm",
+  "Column3": 88.75131164742918,
+  "Column4": 86.4
+ },
+ {
+  "kommunId": "0980",
+  "kommunNamn": "Gotland",
+  "Column3": 88.60271710280557,
+  "Column4": 86.8
+ },
+ {
+  "kommunId": "1060",
+  "kommunNamn": "Olofström",
+  "Column3": 81.78913738019169,
+  "Column4": 81.6
+ },
+ {
+  "kommunId": "1080",
+  "kommunNamn": "Karlskrona",
+  "Column3": 87.3948363517939,
+  "Column4": 87.2
+ },
+ {
+  "kommunId": "1081",
+  "kommunNamn": "Ronneby",
+  "Column3": 83.45974329054843,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "1082",
+  "kommunNamn": "Karlshamn",
+  "Column3": 84.35449384354494,
+  "Column4": 85.6
+ },
+ {
+  "kommunId": "1083",
+  "kommunNamn": "Sölvesborg",
+  "Column3": 85.13714362923929,
+  "Column4": 86
+ },
+ {
+  "kommunId": "1214",
+  "kommunNamn": "Svalöv",
+  "Column3": 77.44969950352757,
+  "Column4": 83.2
+ },
+ {
+  "kommunId": "1230",
+  "kommunNamn": "Staffanstorp",
+  "Column3": 86.79292300024919,
+  "Column4": 88.9
+ },
+ {
+  "kommunId": "1231",
+  "kommunNamn": "Burlöv",
+  "Column3": 73.4444155167925,
+  "Column4": 76.4
+ },
+ {
+  "kommunId": "1233",
+  "kommunNamn": "Vellinge",
+  "Column3": 88.52944143659414,
+  "Column4": 92.3
+ },
+ {
+  "kommunId": "1256",
+  "kommunNamn": "Östra Göinge",
+  "Column3": 80.15040079332286,
+  "Column4": 83.7
+ },
+ {
+  "kommunId": "1257",
+  "kommunNamn": "Örkelljunga",
+  "Column3": 74.79505830735481,
+  "Column4": 81
+ },
+ {
+  "kommunId": "1260",
+  "kommunNamn": "Bjuv",
+  "Column3": 71.51222600300704,
+  "Column4": 76.5
+ },
+ {
+  "kommunId": "1261",
+  "kommunNamn": "Kävlinge",
+  "Column3": 87.17064859938984,
+  "Column4": 89.3
+ },
+ {
+  "kommunId": "1262",
+  "kommunNamn": "Lomma",
+  "Column3": 89.45387035222527,
+  "Column4": 92.9
+ },
+ {
+  "kommunId": "1263",
+  "kommunNamn": "Svedala",
+  "Column3": 84.04146258115959,
+  "Column4": 88.9
+ },
+ {
+  "kommunId": "1264",
+  "kommunNamn": "Skurup",
+  "Column3": 80.30799725547,
+  "Column4": 85.4
+ },
+ {
+  "kommunId": "1265",
+  "kommunNamn": "Sjöbo",
+  "Column3": 79.3315524631919,
+  "Column4": 83.5
+ },
+ {
+  "kommunId": "1266",
+  "kommunNamn": "Hörby",
+  "Column3": 78.7960744919249,
+  "Column4": 84.1
+ },
+ {
+  "kommunId": "1267",
+  "kommunNamn": "Höör",
+  "Column3": 82.49524923256834,
+  "Column4": 86
+ },
+ {
+  "kommunId": "1270",
+  "kommunNamn": "Tomelilla",
+  "Column3": 79.94720633523977,
+  "Column4": 83.3
+ },
+ {
+  "kommunId": "1272",
+  "kommunNamn": "Bromölla",
+  "Column3": 80.93969944835457,
+  "Column4": 85.1
+ },
+ {
+  "kommunId": "1273",
+  "kommunNamn": "Osby",
+  "Column3": 82.12617892134419,
+  "Column4": 84
+ },
+ {
+  "kommunId": "1275",
+  "kommunNamn": "Perstorp",
+  "Column3": 75,
+  "Column4": 76.6
+ },
+ {
+  "kommunId": "1276",
+  "kommunNamn": "Klippan",
+  "Column3": 75.87191515398736,
+  "Column4": 78.8
+ },
+ {
+  "kommunId": "1277",
+  "kommunNamn": "Åstorp",
+  "Column3": 73.09720582447855,
+  "Column4": 77.2
+ },
+ {
+  "kommunId": "1278",
+  "kommunNamn": "Båstad",
+  "Column3": 86.2789813759027,
+  "Column4": 86.6
+ },
+ {
+  "kommunId": "1280",
+  "kommunNamn": "Malmö",
+  "Column3": 72.754913441596,
+  "Column4": 78.6
+ },
+ {
+  "kommunId": "1281",
+  "kommunNamn": "Lund",
+  "Column3": 84.6911420803468,
+  "Column4": 86.4
+ },
+ {
+  "kommunId": "1282",
+  "kommunNamn": "Landskrona",
+  "Column3": 75.40613118502566,
+  "Column4": 79.8
+ },
+ {
+  "kommunId": "1283",
+  "kommunNamn": "Helsingborg",
+  "Column3": 75.76042211186618,
+  "Column4": 81.7
+ },
+ {
+  "kommunId": "1284",
+  "kommunNamn": "Höganäs",
+  "Column3": 86.176222034426,
+  "Column4": 86.2
+ },
+ {
+  "kommunId": "1285",
+  "kommunNamn": "Eslöv",
+  "Column3": 80.97398120259825,
+  "Column4": 83.6
+ },
+ {
+  "kommunId": "1286",
+  "kommunNamn": "Ystad",
+  "Column3": 86.82824427480917,
+  "Column4": 86.5
+ },
+ {
+  "kommunId": "1287",
+  "kommunNamn": "Trelleborg",
+  "Column3": 80.3633470362021,
+  "Column4": 83.4
+ },
+ {
+  "kommunId": "1290",
+  "kommunNamn": "Kristianstad",
+  "Column3": 82.29806662533116,
+  "Column4": 84.1
+ },
+ {
+  "kommunId": "1291",
+  "kommunNamn": "Simrishamn",
+  "Column3": 84.07921502931674,
+  "Column4": 85
+ },
+ {
+  "kommunId": "1292",
+  "kommunNamn": "Ängelholm",
+  "Column3": 84.30897515352977,
+  "Column4": 85.2
+ },
+ {
+  "kommunId": "1293",
+  "kommunNamn": "Hässleholm",
+  "Column3": 79.97686524002313,
+  "Column4": 83.5
+ },
+ {
+  "kommunId": "1315",
+  "kommunNamn": "Hylte",
+  "Column3": 80.32273043882053,
+  "Column4": 80.5
+ },
+ {
+  "kommunId": "1380",
+  "kommunNamn": "Halmstad",
+  "Column3": 83.60446757499561,
+  "Column4": 85.1
+ },
+ {
+  "kommunId": "1381",
+  "kommunNamn": "Laholm",
+  "Column3": 83.24585442890984,
+  "Column4": 84.6
+ },
+ {
+  "kommunId": "1382",
+  "kommunNamn": "Falkenberg",
+  "Column3": 85.05559790752083,
+  "Column4": 85.5
+ },
+ {
+  "kommunId": "1383",
+  "kommunNamn": "Varberg",
+  "Column3": 88.27235998369102,
+  "Column4": 88.1
+ },
+ {
+  "kommunId": "1384",
+  "kommunNamn": "Kungsbacka",
+  "Column3": 87.91518191016672,
+  "Column4": 90
+ },
+ {
+  "kommunId": "1401",
+  "kommunNamn": "Härryda",
+  "Column3": 85.09568656366257,
+  "Column4": 88.9
+ },
+ {
+  "kommunId": "1402",
+  "kommunNamn": "Partille",
+  "Column3": 81.75156902099462,
+  "Column4": 85.9
+ },
+ {
+  "kommunId": "1407",
+  "kommunNamn": "Öckerö",
+  "Column3": 85.81474969926899,
+  "Column4": 90.9
+ },
+ {
+  "kommunId": "1415",
+  "kommunNamn": "Stenungsund",
+  "Column3": 83.01079185829425,
+  "Column4": 87.7
+ },
+ {
+  "kommunId": "1419",
+  "kommunNamn": "Tjörn",
+  "Column3": 87.98458231413535,
+  "Column4": 88.8
+ },
+ {
+  "kommunId": "1421",
+  "kommunNamn": "Orust",
+  "Column3": 84.95541498361405,
+  "Column4": 87.2
+ },
+ {
+  "kommunId": "1427",
+  "kommunNamn": "Sotenäs",
+  "Column3": 88.51579078766696,
+  "Column4": 86.8
+ },
+ {
+  "kommunId": "1430",
+  "kommunNamn": "Munkedal",
+  "Column3": 82.68067130951022,
+  "Column4": 84.5
+ },
+ {
+  "kommunId": "1435",
+  "kommunNamn": "Tanum",
+  "Column3": 86.39648705516422,
+  "Column4": 84.9
+ },
+ {
+  "kommunId": "1438",
+  "kommunNamn": "Dals-Ed",
+  "Column3": 85.76760388156258,
+  "Column4": 79.3
+ },
+ {
+  "kommunId": "1439",
+  "kommunNamn": "Färgelanda",
+  "Column3": 82.71271811476885,
+  "Column4": 84.3
+ },
+ {
+  "kommunId": "1440",
+  "kommunNamn": "Ale",
+  "Column3": 79.80803412726625,
+  "Column4": 85.5
+ },
+ {
+  "kommunId": "1441",
+  "kommunNamn": "Lerum",
+  "Column3": 85.19964243146603,
+  "Column4": 89.8
+ },
+ {
+  "kommunId": "1442",
+  "kommunNamn": "Vårgårda",
+  "Column3": 83.84152665422113,
+  "Column4": 87.6
+ },
+ {
+  "kommunId": "1443",
+  "kommunNamn": "Bollebygd",
+  "Column3": 84.90147461829571,
+  "Column4": 88.9
+ },
+ {
+  "kommunId": "1444",
+  "kommunNamn": "Grästorp",
+  "Column3": 85.46136221620496,
+  "Column4": 87.1
+ },
+ {
+  "kommunId": "1445",
+  "kommunNamn": "Essunga",
+  "Column3": 82.56606990622336,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "1446",
+  "kommunNamn": "Karlsborg",
+  "Column3": 87.7691790040377,
+  "Column4": 87.6
+ },
+ {
+  "kommunId": "1447",
+  "kommunNamn": "Gullspång",
+  "Column3": 81.46243291592128,
+  "Column4": 82.5
+ },
+ {
+  "kommunId": "1452",
+  "kommunNamn": "Tranemo",
+  "Column3": 82.91222729578894,
+  "Column4": 85.6
+ },
+ {
+  "kommunId": "1460",
+  "kommunNamn": "Bengtsfors",
+  "Column3": 84.22083486350839,
+  "Column4": 81.3
+ },
+ {
+  "kommunId": "1461",
+  "kommunNamn": "Mellerud",
+  "Column3": 81.08489356245191,
+  "Column4": 82.6
+ },
+ {
+  "kommunId": "1462",
+  "kommunNamn": "Lilla Edet",
+  "Column3": 77.1694214876033,
+  "Column4": 81.6
+ },
+ {
+  "kommunId": "1463",
+  "kommunNamn": "Mark",
+  "Column3": 80.77753779697623,
+  "Column4": 85.3
+ },
+ {
+  "kommunId": "1465",
+  "kommunNamn": "Svenljunga",
+  "Column3": 81.72382671480143,
+  "Column4": 84.1
+ },
+ {
+  "kommunId": "1466",
+  "kommunNamn": "Herrljunga",
+  "Column3": 82.30144633341791,
+  "Column4": 86.5
+ },
+ {
+  "kommunId": "1470",
+  "kommunNamn": "Vara",
+  "Column3": 82.91427292397225,
+  "Column4": 84
+ },
+ {
+  "kommunId": "1471",
+  "kommunNamn": "Götene",
+  "Column3": 85.4111647390948,
+  "Column4": 86.7
+ },
+ {
+  "kommunId": "1472",
+  "kommunNamn": "Tibro",
+  "Column3": 81.0012836970475,
+  "Column4": 85.6
+ },
+ {
+  "kommunId": "1473",
+  "kommunNamn": "Töreboda",
+  "Column3": 81.00230120173869,
+  "Column4": 83.4
+ },
+ {
+  "kommunId": "1480",
+  "kommunNamn": "Göteborg",
+  "Column3": 76.65768650004539,
+  "Column4": 81
+ },
+ {
+  "kommunId": "1481",
+  "kommunNamn": "Mölndal",
+  "Column3": 82.65340317829867,
+  "Column4": 86.8
+ },
+ {
+  "kommunId": "1482",
+  "kommunNamn": "Kungälv",
+  "Column3": 85.44812246500065,
+  "Column4": 89.3
+ },
+ {
+  "kommunId": "1484",
+  "kommunNamn": "Lysekil",
+  "Column3": 86.21197252208047,
+  "Column4": 85.4
+ },
+ {
+  "kommunId": "1485",
+  "kommunNamn": "Uddevalla",
+  "Column3": 83.64498061180525,
+  "Column4": 84.8
+ },
+ {
+  "kommunId": "1486",
+  "kommunNamn": "Strömstad",
+  "Column3": 82.26013575490737,
+  "Column4": 76.7
+ },
+ {
+  "kommunId": "1487",
+  "kommunNamn": "Vänersborg",
+  "Column3": 82.45792178220869,
+  "Column4": 85.6
+ },
+ {
+  "kommunId": "1488",
+  "kommunNamn": "Trollhättan",
+  "Column3": 79.15688938289902,
+  "Column4": 84.4
+ },
+ {
+  "kommunId": "1489",
+  "kommunNamn": "Alingsås",
+  "Column3": 84.90978353955644,
+  "Column4": 88
+ },
+ {
+  "kommunId": "1490",
+  "kommunNamn": "Borås",
+  "Column3": 79.63820347831691,
+  "Column4": 83.4
+ },
+ {
+  "kommunId": "1491",
+  "kommunNamn": "Ulricehamn",
+  "Column3": 83.83122280350071,
+  "Column4": 85.2
+ },
+ {
+  "kommunId": "1492",
+  "kommunNamn": "Åmål",
+  "Column3": 84.14248779086469,
+  "Column4": 83
+ },
+ {
+  "kommunId": "1493",
+  "kommunNamn": "Mariestad",
+  "Column3": 87.23270135285846,
+  "Column4": 84.9
+ },
+ {
+  "kommunId": "1494",
+  "kommunNamn": "Lidköping",
+  "Column3": 87.7704497299233,
+  "Column4": 87.8
+ },
+ {
+  "kommunId": "1495",
+  "kommunNamn": "Skara",
+  "Column3": 82.79874011698914,
+  "Column4": 85
+ },
+ {
+  "kommunId": "1496",
+  "kommunNamn": "Skövde",
+  "Column3": 83.8099090851023,
+  "Column4": 85.3
+ },
+ {
+  "kommunId": "1497",
+  "kommunNamn": "Hjo",
+  "Column3": 85.55656578776465,
+  "Column4": 86.6
+ },
+ {
+  "kommunId": "1498",
+  "kommunNamn": "Tidaholm",
+  "Column3": 85.04470588235294,
+  "Column4": 86.4
+ },
+ {
+  "kommunId": "1499",
+  "kommunNamn": "Falköping",
+  "Column3": 82.4151054945867,
+  "Column4": 85.7
+ },
+ {
+  "kommunId": "1715",
+  "kommunNamn": "Kil",
+  "Column3": 89.0681726502622,
+  "Column4": 87.3
+ },
+ {
+  "kommunId": "1730",
+  "kommunNamn": "Eda",
+  "Column3": 86.18023337550963,
+  "Column4": 70.5
+ },
+ {
+  "kommunId": "1737",
+  "kommunNamn": "Torsby",
+  "Column3": 89.30583501006036,
+  "Column4": 80.3
+ },
+ {
+  "kommunId": "1760",
+  "kommunNamn": "Storfors",
+  "Column3": 86.34103539046505,
+  "Column4": 83.9
+ },
+ {
+  "kommunId": "1761",
+  "kommunNamn": "Hammarö",
+  "Column3": 92.6851780632259,
+  "Column4": 89.6
+ },
+ {
+  "kommunId": "1762",
+  "kommunNamn": "Munkfors",
+  "Column3": 84.49147188881871,
+  "Column4": 80.6
+ },
+ {
+  "kommunId": "1763",
+  "kommunNamn": "Forshaga",
+  "Column3": 88.84849780818989,
+  "Column4": 87.1
+ },
+ {
+  "kommunId": "1764",
+  "kommunNamn": "Grums",
+  "Column3": 87.52642706131078,
+  "Column4": 83.3
+ },
+ {
+  "kommunId": "1765",
+  "kommunNamn": "Årjäng",
+  "Column3": 85.20710059171599,
+  "Column4": 76.5
+ },
+ {
+  "kommunId": "1766",
+  "kommunNamn": "Sunne",
+  "Column3": 88.94136517554803,
+  "Column4": 85.4
+ },
+ {
+  "kommunId": "1780",
+  "kommunNamn": "Karlstad",
+  "Column3": 89.51465834915923,
+  "Column4": 87.2
+ },
+ {
+  "kommunId": "1781",
+  "kommunNamn": "Kristinehamn",
+  "Column3": 88.90304872071366,
+  "Column4": 84.7
+ },
+ {
+  "kommunId": "1782",
+  "kommunNamn": "Filipstad",
+  "Column3": 86.18421052631578,
+  "Column4": 80.5
+ },
+ {
+  "kommunId": "1783",
+  "kommunNamn": "Hagfors",
+  "Column3": 86.26746506986028,
+  "Column4": 81
+ },
+ {
+  "kommunId": "1784",
+  "kommunNamn": "Arvika",
+  "Column3": 89.41441441441441,
+  "Column4": 83.1
+ },
+ {
+  "kommunId": "1785",
+  "kommunNamn": "Säffle",
+  "Column3": 86.87605590539088,
+  "Column4": 82.9
+ },
+ {
+  "kommunId": "1814",
+  "kommunNamn": "Lekeberg",
+  "Column3": 85.8949269908174,
+  "Column4": 88.8
+ },
+ {
+  "kommunId": "1860",
+  "kommunNamn": "Laxå",
+  "Column3": 84.71177944862156,
+  "Column4": 83.3
+ },
+ {
+  "kommunId": "1861",
+  "kommunNamn": "Hallsberg",
+  "Column3": 85.77135832821143,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "1862",
+  "kommunNamn": "Degerfors",
+  "Column3": 84.5674486803519,
+  "Column4": 84.9
+ },
+ {
+  "kommunId": "1863",
+  "kommunNamn": "Hällefors",
+  "Column3": 83.70089593383874,
+  "Column4": 81.1
+ },
+ {
+  "kommunId": "1864",
+  "kommunNamn": "Ljusnarsberg",
+  "Column3": 79.0583619421285,
+  "Column4": 79.3
+ },
+ {
+  "kommunId": "1880",
+  "kommunNamn": "Örebro",
+  "Column3": 83.23437963845444,
+  "Column4": 85.7
+ },
+ {
+  "kommunId": "1881",
+  "kommunNamn": "Kumla",
+  "Column3": 87.19547066224408,
+  "Column4": 86.6
+ },
+ {
+  "kommunId": "1882",
+  "kommunNamn": "Askersund",
+  "Column3": 85.8936104537504,
+  "Column4": 87.1
+ },
+ {
+  "kommunId": "1883",
+  "kommunNamn": "Karlskoga",
+  "Column3": 88.72691552062868,
+  "Column4": 84.5
+ },
+ {
+  "kommunId": "1884",
+  "kommunNamn": "Nora",
+  "Column3": 85.74492099322799,
+  "Column4": 84.6
+ },
+ {
+  "kommunId": "1885",
+  "kommunNamn": "Lindesberg",
+  "Column3": 83.51581198757447,
+  "Column4": 84.9
+ },
+ {
+  "kommunId": "1904",
+  "kommunNamn": "Skinnskatteberg",
+  "Column3": 81.41333333333334,
+  "Column4": 83
+ },
+ {
+  "kommunId": "1907",
+  "kommunNamn": "Surahammar",
+  "Column3": 81.64001442827943,
+  "Column4": 81.5
+ },
+ {
+  "kommunId": "1960",
+  "kommunNamn": "Kungsör",
+  "Column3": 83.39138915981607,
+  "Column4": 85.5
+ },
+ {
+  "kommunId": "1961",
+  "kommunNamn": "Hallstahammar",
+  "Column3": 81.63537879350004,
+  "Column4": 82.6
+ },
+ {
+  "kommunId": "1962",
+  "kommunNamn": "Norberg",
+  "Column3": 83.39244731900689,
+  "Column4": 84.1
+ },
+ {
+  "kommunId": "1980",
+  "kommunNamn": "Västerås",
+  "Column3": 82.03453541642193,
+  "Column4": 84
+ },
+ {
+  "kommunId": "1981",
+  "kommunNamn": "Sala",
+  "Column3": 83.72596661736742,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "1982",
+  "kommunNamn": "Fagersta",
+  "Column3": 80.53894969189737,
+  "Column4": 80.6
+ },
+ {
+  "kommunId": "1983",
+  "kommunNamn": "Köping",
+  "Column3": 81.43162194782286,
+  "Column4": 82.8
+ },
+ {
+  "kommunId": "1984",
+  "kommunNamn": "Arboga",
+  "Column3": 84.46117408221959,
+  "Column4": 84.2
+ },
+ {
+  "kommunId": "2021",
+  "kommunNamn": "Vansbro",
+  "Column3": 83.67880160250827,
+  "Column4": 84.5
+ },
+ {
+  "kommunId": "2023",
+  "kommunNamn": "Malung-Sälen",
+  "Column3": 84.50167455826308,
+  "Column4": 84.4
+ },
+ {
+  "kommunId": "2026",
+  "kommunNamn": "Gagnef",
+  "Column3": 88.42355740630578,
+  "Column4": 87.8
+ },
+ {
+  "kommunId": "2029",
+  "kommunNamn": "Leksand",
+  "Column3": 89.5083932853717,
+  "Column4": 87.8
+ },
+ {
+  "kommunId": "2031",
+  "kommunNamn": "Rättvik",
+  "Column3": 85.14553014553015,
+  "Column4": 85.4
+ },
+ {
+  "kommunId": "2034",
+  "kommunNamn": "Orsa",
+  "Column3": 82.706002034588,
+  "Column4": 84.5
+ },
+ {
+  "kommunId": "2039",
+  "kommunNamn": "Älvdalen",
+  "Column3": 84.76666666666667,
+  "Column4": 84.3
+ },
+ {
+  "kommunId": "2061",
+  "kommunNamn": "Smedjebacken",
+  "Column3": 85.91087811271298,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "2062",
+  "kommunNamn": "Mora",
+  "Column3": 84.14697556184643,
+  "Column4": 84.4
+ },
+ {
+  "kommunId": "2080",
+  "kommunNamn": "Falun",
+  "Column3": 86.91743456674091,
+  "Column4": 86.9
+ },
+ {
+  "kommunId": "2081",
+  "kommunNamn": "Borlänge",
+  "Column3": 82.20569605405151,
+  "Column4": 85.1
+ },
+ {
+  "kommunId": "2082",
+  "kommunNamn": "Säter",
+  "Column3": 87.70660041050016,
+  "Column4": 87.2
+ },
+ {
+  "kommunId": "2083",
+  "kommunNamn": "Hedemora",
+  "Column3": 85.3556808527072,
+  "Column4": 83
+ },
+ {
+  "kommunId": "2084",
+  "kommunNamn": "Avesta",
+  "Column3": 83.77220480668757,
+  "Column4": 83.6
+ },
+ {
+  "kommunId": "2085",
+  "kommunNamn": "Ludvika",
+  "Column3": 82.79314285714285,
+  "Column4": 84.6
+ },
+ {
+  "kommunId": "2101",
+  "kommunNamn": "Ockelbo",
+  "Column3": 81.35151393623421,
+  "Column4": 84.7
+ },
+ {
+  "kommunId": "2104",
+  "kommunNamn": "Hofors",
+  "Column3": 81.79445756182429,
+  "Column4": 81.9
+ },
+ {
+  "kommunId": "2121",
+  "kommunNamn": "Ovanåker",
+  "Column3": 85.74795081967214,
+  "Column4": 84.5
+ },
+ {
+  "kommunId": "2132",
+  "kommunNamn": "Nordanstig",
+  "Column3": 78.23060372104797,
+  "Column4": 81.6
+ },
+ {
+  "kommunId": "2161",
+  "kommunNamn": "Ljusdal",
+  "Column3": 83.28627893845285,
+  "Column4": 80.6
+ },
+ {
+  "kommunId": "2180",
+  "kommunNamn": "Gävle",
+  "Column3": 82.12097020357369,
+  "Column4": 85.6
+ },
+ {
+  "kommunId": "2181",
+  "kommunNamn": "Sandviken",
+  "Column3": 83.87027754004157,
+  "Column4": 84.4
+ },
+ {
+  "kommunId": "2182",
+  "kommunNamn": "Söderhamn",
+  "Column3": 82.36693567196902,
+  "Column4": 84.3
+ },
+ {
+  "kommunId": "2183",
+  "kommunNamn": "Bollnäs",
+  "Column3": 83.80448904618969,
+  "Column4": 83.8
+ },
+ {
+  "kommunId": "2184",
+  "kommunNamn": "Hudiksvall",
+  "Column3": 83.69282496986614,
+  "Column4": 83.3
+ },
+ {
+  "kommunId": "2260",
+  "kommunNamn": "Ånge",
+  "Column3": 86.71628611076069,
+  "Column4": 83.6
+ },
+ {
+  "kommunId": "2262",
+  "kommunNamn": "Timrå",
+  "Column3": 85.63414145461832,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "2280",
+  "kommunNamn": "Härnösand",
+  "Column3": 87.52678954136304,
+  "Column4": 85.3
+ },
+ {
+  "kommunId": "2281",
+  "kommunNamn": "Sundsvall",
+  "Column3": 86.63244054826367,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "2282",
+  "kommunNamn": "Kramfors",
+  "Column3": 84.64359238291303,
+  "Column4": 83.5
+ },
+ {
+  "kommunId": "2283",
+  "kommunNamn": "Sollefteå",
+  "Column3": 84.97832506125526,
+  "Column4": 83.9
+ },
+ {
+  "kommunId": "2284",
+  "kommunNamn": "Örnsköldsvik",
+  "Column3": 88.33026330046593,
+  "Column4": 86.7
+ },
+ {
+  "kommunId": "2303",
+  "kommunNamn": "Ragunda",
+  "Column3": 84.30971843778383,
+  "Column4": 83
+ },
+ {
+  "kommunId": "2305",
+  "kommunNamn": "Bräcke",
+  "Column3": 81.62724692526017,
+  "Column4": 81.5
+ },
+ {
+  "kommunId": "2309",
+  "kommunNamn": "Krokom",
+  "Column3": 87.52404047161134,
+  "Column4": 86.5
+ },
+ {
+  "kommunId": "2313",
+  "kommunNamn": "Strömsund",
+  "Column3": 84.99948733722957,
+  "Column4": 81.3
+ },
+ {
+  "kommunId": "2321",
+  "kommunNamn": "Åre",
+  "Column3": 85.20625889046943,
+  "Column4": 86
+ },
+ {
+  "kommunId": "2326",
+  "kommunNamn": "Berg",
+  "Column3": 83.73261852906685,
+  "Column4": 83.2
+ },
+ {
+  "kommunId": "2361",
+  "kommunNamn": "Härjedalen",
+  "Column3": 86.79396295449348,
+  "Column4": 81.4
+ },
+ {
+  "kommunId": "2380",
+  "kommunNamn": "Östersund",
+  "Column3": 85.50429285781678,
+  "Column4": 85.8
+ },
+ {
+  "kommunId": "2401",
+  "kommunNamn": "Nordmaling",
+  "Column3": 88.3155792276964,
+  "Column4": 84
+ },
+ {
+  "kommunId": "2403",
+  "kommunNamn": "Bjurholm",
+  "Column3": 88.26151560178306,
+  "Column4": 84.2
+ },
+ {
+  "kommunId": "2404",
+  "kommunNamn": "Vindeln",
+  "Column3": 86.46616541353383,
+  "Column4": 82.2
+ },
+ {
+  "kommunId": "2409",
+  "kommunNamn": "Robertsfors",
+  "Column3": 89.34879571810883,
+  "Column4": 85
+ },
+ {
+  "kommunId": "2417",
+  "kommunNamn": "Norsjö",
+  "Column3": 89.58961979480989,
+  "Column4": 81
+ },
+ {
+  "kommunId": "2418",
+  "kommunNamn": "Malå",
+  "Column3": 85.51696921862668,
+  "Column4": 82.4
+ },
+ {
+  "kommunId": "2421",
+  "kommunNamn": "Storuman",
+  "Column3": 88.56738162687171,
+  "Column4": 81.5
+ },
+ {
+  "kommunId": "2422",
+  "kommunNamn": "Sorsele",
+  "Column3": 88.348579682234,
+  "Column4": 77.4
+ },
+ {
+  "kommunId": "2425",
+  "kommunNamn": "Dorotea",
+  "Column3": 90.0513778608127,
+  "Column4": 83.2
+ },
+ {
+  "kommunId": "2460",
+  "kommunNamn": "Vännäs",
+  "Column3": 88.24259131633356,
+  "Column4": 85.2
+ },
+ {
+  "kommunId": "2462",
+  "kommunNamn": "Vilhelmina",
+  "Column3": 82.28941684665226,
+  "Column4": 82.8
+ },
+ {
+  "kommunId": "2463",
+  "kommunNamn": "Åsele",
+  "Column3": 87.89649415692821,
+  "Column4": 81.2
+ },
+ {
+  "kommunId": "2480",
+  "kommunNamn": "Umeå",
+  "Column3": 89.46377389642794,
+  "Column4": 87.1
+ },
+ {
+  "kommunId": "2481",
+  "kommunNamn": "Lycksele",
+  "Column3": 87.23740013808067,
+  "Column4": 82.4
+ },
+ {
+  "kommunId": "2482",
+  "kommunNamn": "Skellefteå",
+  "Column3": 88.08936673900178,
+  "Column4": 86.2
+ },
+ {
+  "kommunId": "2505",
+  "kommunNamn": "Arvidsjaur",
+  "Column3": 87.46881596622529,
+  "Column4": 82.7
+ },
+ {
+  "kommunId": "2506",
+  "kommunNamn": "Arjeplog",
+  "Column3": 88.13993174061433,
+  "Column4": 80.7
+ },
+ {
+  "kommunId": "2510",
+  "kommunNamn": "Jokkmokk",
+  "Column3": 85.24667931688803,
+  "Column4": 81.4
+ },
+ {
+  "kommunId": "2513",
+  "kommunNamn": "Överkalix",
+  "Column3": 85.5022437003797,
+  "Column4": 83
+ },
+ {
+  "kommunId": "2514",
+  "kommunNamn": "Kalix",
+  "Column3": 88.10874530317541,
+  "Column4": 85
+ },
+ {
+  "kommunId": "2518",
+  "kommunNamn": "Övertorneå",
+  "Column3": 88.35265570234566,
+  "Column4": 76.2
+ },
+ {
+  "kommunId": "2521",
+  "kommunNamn": "Pajala",
+  "Column3": 84.23520218792733,
+  "Column4": 78.8
+ },
+ {
+  "kommunId": "2523",
+  "kommunNamn": "Gällivare",
+  "Column3": 86.40140512058366,
+  "Column4": 80.1
+ },
+ {
+  "kommunId": "2560",
+  "kommunNamn": "Älvsbyn",
+  "Column3": 85.13473930872877,
+  "Column4": 83.3
+ },
+ {
+  "kommunId": "2580",
+  "kommunNamn": "Luleå",
+  "Column3": 87.36805545068785,
+  "Column4": 86.9
+ },
+ {
+  "kommunId": "2581",
+  "kommunNamn": "Piteå",
+  "Column3": 89.25040953510704,
+  "Column4": 88.2
+ },
+ {
+  "kommunId": "2582",
+  "kommunNamn": "Boden",
+  "Column3": 88.23356314107954,
+  "Column4": 86.1
+ },
+ {
+  "kommunId": "2583",
+  "kommunNamn": "Haparanda",
+  "Column3": 81.98865038243277,
+  "Column4": 63.3
+ },
+ {
+  "kommunId": "2584",
+  "kommunNamn": "Kiruna",
+  "Column3": 85.25491855299344,
+  "Column4": 83.3
+ }
+]

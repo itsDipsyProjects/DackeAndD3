@@ -1,4 +1,4 @@
-import {formatData} from "./formatData.js"
+import { formatData } from "./formatData.js"
 import { getColor } from "./colorize.js";
   
 function createSVG (){
@@ -52,7 +52,20 @@ function createSVG (){
                                             getData("andraDos", d)
                                           });
 
-  
+  let gVizbuttons2 = gVizButtonsContainer.selectAll("rect2")
+    .data(buttonData)
+    .enter()
+    .append("rect")
+    .attr("x", (d, i) => i * 90)
+    .attr("y", 500)
+    .attr("width", 70)
+    .attr("height", 35)
+    .attr("fill", "grey")
+    .on("click", (i, d) => {
+      getData("andraDos", d)
+    });
+
+
   gVizButtonsContainer.selectAll("textfirst")
                       .data(buttonData)
                       .enter()
@@ -175,20 +188,27 @@ console.log(maxNmin)
 }
 
 
-async function getData(dos, åldersgrupp){
+  function createLegend() {
+    d3.select("legend")
+      .style("fill", "red")
+    console.log("inne")
+  }
 
-  const dataset = await formatData()
 
-  let sendData = []
-  let highestValue = dataset[0].forstaDos[0].value;
-  let lowestValue = dataset[0].forstaDos[0].value;
+  async function getData(dos, åldersgrupp) {
 
-   dataset.forEach(data => {
+    const dataset = await formatData()
+    console.log(dataset)
+    let sendData = []
+    let highestValue = dataset[0].forstaDos[0].value;
+    let lowestValue = dataset[0].forstaDos[0].value;
 
-    if(dos === "förstaDos"){
-      data.forstaDos.forEach( value => {
+    dataset.forEach(data => {
+      
+      if (dos === "förstaDos") {
+        data.forstaDos.forEach(value => {
 
-        if (value.age === åldersgrupp){
+          if (value.age === åldersgrupp) {
 
             if (value.value < lowestValue) {
               lowestValue = value.value;
@@ -196,41 +216,45 @@ async function getData(dos, åldersgrupp){
 
             if (value.value > highestValue) {
               highestValue = value.value;
-            } 
+            }
 
-          let Data = {
-            "id" : data.id,
-            "value": value.value
-          }            
+            let Data = {
+              "id": data.id,
+              "value": value.value,
+              "population": data.population,
+              "kommunNamn": data.kommunNamn,
+            }
             sendData.push(Data)
-            
-        } 
-      })
-    } 
 
-    if(dos === "andraDos") {
-      data.påfyllnadsdos.forEach( value => {
+          }
+        })
+      }
 
-        if (value.age === åldersgrupp){
+      if (dos === "andraDos") {
+        data.påfyllnadsdos.forEach(value => {
 
-          if (value.value < lowestValue) {
+          if (value.age === åldersgrupp) {
+
+            if (value.value < lowestValue) {
               lowestValue = value.value;
             }
 
-          if (value.value > highestValue) {
+            if (value.value > highestValue) {
               highestValue = value.value;
-            } 
+            }
 
-          let Data = {
-            "id" : data.id,
-            "value": value.value
-          } 
-            
+            let Data = {
+              "id": data.id,
+              "value": value.value,
+              "population": data.population,
+              "kommunNamn": data.kommunNamn,
+            }
+
             sendData.push(Data)
-        } 
-      }) 
-    }
-  })
+          }
+        })
+      }
+    })
 
   if(dos === "förstaDos"){
 
@@ -260,7 +284,8 @@ async function getData(dos, åldersgrupp){
         "min": min,
         
     }
-    getColor(sendData,"andraDos", maxNmin)
+
+    getColor(sendData,"förstDos", maxNmin)
   }
 }
 
