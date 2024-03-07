@@ -78,7 +78,7 @@ export function UpdateLegend(maxNmin, color){
 export async function getData(dos, agegroup) {
  console.log("hello")
   const dataset = await formatData()
-    
+    console.log(dataset)
   let sendData = [];
   let highestValue = 0;
   let lowestValue = 101;
