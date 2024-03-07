@@ -52,18 +52,6 @@ function createSVG (){
                                             getData("andraDos", d)
                                           });
 
-  let gVizbuttons2 = gVizButtonsContainer.selectAll("rect2")
-    .data(buttonData)
-    .enter()
-    .append("rect")
-    .attr("x", (d, i) => i * 90)
-    .attr("y", 500)
-    .attr("width", 70)
-    .attr("height", 35)
-    .attr("fill", "grey")
-    .on("click", (i, d) => {
-      getData("andraDos", d)
-    });
 
 
   gVizButtonsContainer.selectAll("textfirst")
