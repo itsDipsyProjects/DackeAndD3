@@ -15,7 +15,7 @@ let { max, middle, min} = maxNmin
        {offset: "100%", color: colorScale(max)}
     ]
 
-    let minmax = [min, middle, max]
+    let minmax = [max, middle, min]
 
     UpdateLegend(minmax, colors)
     
@@ -24,34 +24,39 @@ let { max, middle, min} = maxNmin
         data.forEach((item, i) => {
             const node = d3.select(`#x${item.id}`)
             .on("mouseover", (e) =>  {
-                d3.select("svg").append("g").classed("hoverGroupd",true)
+            let hoover = d3.select("svg").append("g").classed("hoverGroupd",true)
+
+                hoover
                 .append("rect")
-                .attr("width", 150)
-                .attr("height", 80)
-                .attr("fill", "grey")
+                .attr("width", 200)
+                .attr("height", 55)
+                .attr("rx", 6) 
+                .attr("ry", 6)
                 .attr("x", `${e.clientX - 170}`)
                 .attr("y", `${e.clientY}`);
 
-                d3.select("svg").append("g").classed("hoverGroupd",true)
+    
+                hoover
                 .append("text")
-                .attr("fill", "white")
-                .attr("x", `${e.clientX - 155}`)
-                .attr("y", `${e.clientY + 20}`)
-                .text(`${item.value}%`);
+                .attr("x", `${e.clientX - 165}`)
+                .attr("y", `${e.clientY + 25}`)
+                .text(`${item.kommunNamn}`)
+                .style("font-size", "22px")
 
-                d3.select("svg").append("g").classed("hoverGroupd",true)
+                hoover
                 .append("text")
-                .attr("fill", "white")
-                .attr("x", `${e.clientX - 155}`)
-                .attr("y", `${e.clientY + 40}`)
-                .text(`${item.population} Population`);
+                .attr("x", `${e.clientX - 165}`)
+                .attr("y", `${e.clientY + 45}`)
+                .text(`Befolkning: ${item.population}`)
+                .style("font-size", "12px")
 
-                d3.select("svg").append("g").classed("hoverGroupd",true)
+                hoover
                 .append("text")
-                .attr("fill", "white")
-                .attr("x", `${e.clientX - 155}`)
-                .attr("y", `${e.clientY + 70}`)
-                .text(`${item.kommunNamn}`);
+                .attr("x", `${e.clientX - 15}`)
+                .attr("y", `${e.clientY + 35}`)
+                .text(`${item.value}%`)
+                .style("font-size", "20px")
+
 
             })
             .on("mouseleave", (e) =>{
@@ -71,34 +76,40 @@ let { max, middle, min} = maxNmin
             const node = d3.select(`#x${item.id}`)
                 .on("mouseover", (e) =>  {
 
-                    d3.select("svg").append("g").classed("hoverGroupd",true)
-                    .append("rect")
-                    .attr("width", 150)
-                    .attr("height", 80)
-                    .attr("fill", "grey")
-                    .attr("x", `${e.clientX - 170}`)
-                    .attr("y", `${e.clientY}`);
+                let hoover = d3.select("svg").append("g").classed("hoverGroupd",true)
 
-                    d3.select("svg").append("g").classed("hoverGroupd",true)
-                    .append("text")
-                    .attr("fill", "white")
-                    .attr("x", `${e.clientX - 155}`)
-                    .attr("y", `${e.clientY + 20}`)
-                    .text(`${item.value}%`);
+                hoover
+                .append("rect")
+                .attr("width", 200)
+                .attr("height", 55)
+                .attr("rx", 6) 
+                .attr("ry", 6)
+                .attr("x", `${e.clientX - 170}`)
+                .attr("y", `${e.clientY}`);
 
-                    d3.select("svg").append("g").classed("hoverGroupd",true)
-                    .append("text")
-                    .attr("fill", "white")
-                    .attr("x", `${e.clientX - 155}`)
-                    .attr("y", `${e.clientY + 40}`)
-                    .text(`${item.population} Population`);
 
-                    d3.select("svg").append("g").classed("hoverGroupd",true)
-                    .append("text")
-                    .attr("fill", "white")
-                    .attr("x", `${e.clientX - 155}`)
-                    .attr("y", `${e.clientY + 70}`)
-                    .text(`${item.kommunNamn}`);
+                hoover
+                .append("text")
+                .attr("x", `${e.clientX - 165}`)
+                .attr("y", `${e.clientY + 25}`)
+                .text(`${item.kommunNamn}`)
+                .style("font-size", "22px")
+
+                hoover
+                .append("text")
+                .attr("x", `${e.clientX - 165}`)
+                .attr("y", `${e.clientY + 45}`)
+                .text(`Befolkning: ${item.population}`)
+                .style("font-size", "12px")
+
+                hoover
+                .append("text")
+                .attr("x", `${e.clientX - 15}`)
+                .attr("y", `${e.clientY + 35}`)
+                .text(`${item.value}%`)
+                .style("font-size", "20px")
+
+
             })
                 
             .on("mouseleave", (e) =>{

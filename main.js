@@ -8,8 +8,7 @@ function createSVG (){
 
   let svg = d3.select("svg")
 
-
-const defaultV = [0, 50, 100];
+const defaultV = [100, 50, 0];
 
   let legend = svg.append("g")
                   .classed("gradient", true)
@@ -17,9 +16,9 @@ const defaultV = [0, 50, 100];
   let rectLegend = legend
                   .append("rect")
                   .classed("legend", true)
-                  .attr("transform", "translate(340, 130)")
-                  .attr("width", 220)
-                  .attr("height", 10)
+                  .attr("transform", "translate(330, 150)")
+                  .attr("width", 10)
+                  .attr("height", 400)
                   .style("fill", "white")
                   .style("stroke", "black")
                   .style("stroke-width", "0.2px")
@@ -39,18 +38,19 @@ const defaultV = [0, 50, 100];
                   .data(defaultV)
                   .enter()
                   .append("text")
-                  .attr("x", (d, i) => { return i * 100 + 335; }) 
-                  .attr("y", 160)
+                  .style("font-family", "Roboto")
+                  .attr("x", 350) 
+                  .attr("y", (d, i) => { return i * 190 +165; })
                   .text(d => d + "%")
 
           
 
   legend.append("linearGradient")
         .attr("id", "myGradient")
-        .attr("x1", 0)
+        .attr("x1", 1)
         .attr("y1", 1)
         .attr("x2", 1)
-        .attr("y2", 1)
+        .attr("y2", 0)
   
 }
 
@@ -76,7 +76,7 @@ export function UpdateLegend(maxNmin, color){
 }
 
 export async function getData(dos, agegroup) {
- console.log("hello")
+
   const dataset = await formatData()
   let sendData = [];
   let highestValue = 0;
