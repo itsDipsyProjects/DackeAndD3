@@ -19,7 +19,7 @@ let { max, middle, min} = maxNmin
        {offset: "100%", color: colorScale(max)}
     ]
 
-    let minmax = [min, max, middle]
+    let minmax = [min, middle, max]
 
     UpdateLegend(minmax, colors)
     
