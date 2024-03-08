@@ -1,6 +1,6 @@
 import { getData } from "./main.js";
 
-let actionsDOM = d3.select("body").append("div").classed("actions", true);
+let actionsDOM = d3.select("#wrapper").append("div").classed("actions", true);
 
 
 
@@ -30,7 +30,8 @@ let headerSecond = domButtonDivSecond.append("h1")
 domButtonDivSecond.selectAll("btns").data(buttonData).enter()
 .append("button")
 .text((d) => {return d + " år"})
-.on("click", (i,d) => {
+.on("click", (i, d) => {
+
     getData("latestDos", d)
 })
 

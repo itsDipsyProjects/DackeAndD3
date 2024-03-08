@@ -5,6 +5,15 @@
 
 body{
     font-family: Roboto;
+
+}
+
+body > h1{
+    font-size: 50px;
+    margin-left: 40px
+}
+
+#wrapper{
     display: flex;
     flex-direction: row;
     justify-content: center;
