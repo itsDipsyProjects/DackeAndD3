@@ -3,13 +3,9 @@ import { UpdateLegend } from "./main.js"
 
 
 export async function getColor(data, dos, maxNmin){
-    console.log(maxNmin)
 
 let { max, middle, min} = maxNmin
 
-     console.log("max value:",max)
-     console.log("min value:", min)
-     console.log("middle value", middle)
 
     const colorScale = d3.scaleLinear([min, max], ["yellow", "darkgreen"])
 
