@@ -12,9 +12,10 @@ let { max, middle, min} = maxNmin
     let colors = [
        { offset: "0", color: colorScale(min)},
        { offset: "50%", color: colorScale(middle)},
-       {offset: "100%", color: colorScale(max)}
+       { offset: "100%", color: colorScale(max)}
     ]
 
+      console.log(maxNmin)
     let minmax = [max, middle, min]
 
     UpdateLegend(minmax, colors)

@@ -56,6 +56,7 @@ function createSVG (){
 }
 
 export function UpdateLegend(maxNmin, color){
+  console.log(maxNmin)
 
   let legend = d3.select("#myGradient");
 
@@ -87,13 +88,16 @@ export async function getData(dos, agegroup) {
   const dataset = await formatData()
   let sendData = [];
   let highestValue = 0;
-  let lowestValue = 101;
+  let lowestValue = 100;
 
     dataset.forEach(data => {
       if (dos === "firstDos") {
         data.firstDos.forEach(value => {
 
           if (value.age === agegroup) {
+
+            //behövs en if sats för att säkerställa om det ska jämföras inom gruppen eller ej
+            //och sen vända på värdena, så highest är 100, och lowest är 0
 
             highestValue = Math.max(highestValue, value.value);
             lowestValue = Math.min(lowestValue, value.value);
