@@ -6,7 +6,7 @@ let actionsDOM = d3.select("#wrapper").append("div").classed("actions", true);
 //.text("Vilken typ av jämförelse du vill göra?")
 let options = actionsDOM.append("div").classed("options", true)
 
-let optionData = ["Totalt", "Inom gruppen"];
+let optionData = ["Absolut", "Relativ"];
 
 options.selectAll("button")
         .data(optionData)

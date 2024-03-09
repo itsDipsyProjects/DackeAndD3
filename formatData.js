@@ -43,14 +43,14 @@ export async function formatData(){
       if (dataset[j].key[1] === "1"){
         region_object.firstDos.push({
           age: keyValue(dataset[j].key[2]),
-          value: parseInt(dataset[j].values)
+          value: parseFloat(dataset[j].values)
         })
       }
 
       if (dataset[j].key[1] === "2"){
         region_object.latestDos.push({
           age: keyValue(dataset[j].key[2]),
-          value: parseInt(dataset[j].values)
+          value: parseFloat(dataset[j].values)
         })
       }
       

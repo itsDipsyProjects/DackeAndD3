@@ -53,7 +53,7 @@ let { max, middle, min} = maxNmin
 
                 hoover
                 .append("text")
-                .attr("x", `${e.clientX - 15}`)
+                .attr("x", `${e.clientX - 27}`)
                 .attr("y", `${e.clientY + 35}`)
                 .text(`${item.value}%`)
                 .style("font-size", "20px")
@@ -105,7 +105,7 @@ let { max, middle, min} = maxNmin
 
                 hoover
                 .append("text")
-                .attr("x", `${e.clientX - 15}`)
+                .attr("x", `${e.clientX - 27}`)
                 .attr("y", `${e.clientY + 35}`)
                 .text(`${item.value}%`)
                 .style("font-size", "20px")
