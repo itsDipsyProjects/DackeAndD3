@@ -38,8 +38,9 @@ domButtonDivSecond.selectAll("button").data(buttonData).enter()
     
 })
 
-domButtonDivFirst.selectAll("button").attr("disabled", true);
-domButtonDivSecond.selectAll("button").attr("disabled", true);
+
+let allFilterButtons = d3.selectAll(".divForButtonsFirst button, .divForButtonsSecond button");
+allFilterButtons.attr("disabled", false);
 
 let optionData = ["Absolut", "Relativ"];
 
@@ -50,7 +51,6 @@ options.selectAll("button")
         .text( d => {return d})
         .on("click", function () {
             toggleButtonColor(this)
-
         });
 
 
@@ -62,20 +62,20 @@ function renderTypeData(d, dos){
 
 
 function toggleButtonColor(element) {
+    console.log(d3.selectAll(".options button"))
 
-    console.log(element.innerText)
 
     let hasClass = d3.select(element).classed("on");
 
     if(hasClass){
-        domButtonDivFirst.selectAll("button").attr("disabled", true);
-        domButtonDivSecond.selectAll("button").attr("disabled", true);
+   
+        allFilterButtons.attr("disabled", true);
         return d3.select(element).classed("on", false);
          
     }
     else {
-        domButtonDivFirst.selectAll("button").attr("disabled", null);
-        domButtonDivSecond.selectAll("button").attr("disabled", null);
+
+        allFilterButtons.attr("disabled", null);
         return d3.select(element).classed("on", true);
             
     }

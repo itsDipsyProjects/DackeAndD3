@@ -88,7 +88,7 @@ export async function getData(dos, agegroup, dataType) {
   const dataset = await formatData()
   let sendData = [];
   let highestValue = 0;
-  let lowestValue = 100;
+  let lowestValue = 101;
 
     dataset.forEach(data => {
       if (dos === "firstDos") {
