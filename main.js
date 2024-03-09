@@ -56,7 +56,6 @@ function createSVG (){
 }
 
 export function UpdateLegend(maxNmin, color){
-  console.log(maxNmin)
 
   let legend = d3.select("#myGradient");
 
@@ -83,7 +82,8 @@ export function UpdateLegend(maxNmin, color){
 
 }
 
-export async function getData(dos, agegroup) {
+export async function getData(dos, agegroup, dataType) {
+  console.log(dataType)
 
   const dataset = await formatData()
   let sendData = [];
@@ -95,12 +95,14 @@ export async function getData(dos, agegroup) {
         data.firstDos.forEach(value => {
 
           if (value.age === agegroup) {
-
-            //behövs en if sats för att säkerställa om det ska jämföras inom gruppen eller ej
-            //och sen vända på värdena, så highest är 100, och lowest är 0
-
-            highestValue = Math.max(highestValue, value.value);
-            lowestValue = Math.min(lowestValue, value.value);
+            
+            if(dataType === "Absolut"){
+              highestValue = 100;
+              lowestValue = 0;
+            } else {
+              highestValue = Math.max(highestValue, value.value);
+              lowestValue = Math.min(lowestValue, value.value);
+            }
 
             let Data = {
               "id": data.id,
@@ -119,8 +121,14 @@ export async function getData(dos, agegroup) {
 
           if (value.age === agegroup) {
 
-            highestValue = Math.max(highestValue, value.value);
-            lowestValue = Math.min(lowestValue, value.value);
+            if(dataType === "Absolut"){
+              highestValue = 100;
+              lowestValue = 0;
+            } else {
+              highestValue = Math.max(highestValue, value.value);
+              lowestValue = Math.min(lowestValue, value.value);
+            }
+
 
             let Data = {
               "id": data.id,
@@ -145,6 +153,8 @@ export async function getData(dos, agegroup) {
       "middle": middle,
       "min": min,
     }
+
+      console.log(maxNmin)
 
     getColor(sendData,"firstDos", maxNmin)
     
