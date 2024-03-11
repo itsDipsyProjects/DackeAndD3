@@ -34,27 +34,27 @@ let { max, middle, min} = maxNmin
                 .attr("rx", 6) 
                 .attr("ry", 6)
                 .attr("x", `${e.clientX - 170}`)
-                .attr("y", `${e.clientY}`);
+                .attr("y", `${e.clientY - 170}`);
 
     
                 hoover
                 .append("text")
                 .attr("x", `${e.clientX - 165}`)
-                .attr("y", `${e.clientY + 25}`)
+                .attr("y", `${e.clientY + 25 - 170}`)
                 .text(`${item.kommunNamn}`)
                 .style("font-size", "22px")
 
                 hoover
                 .append("text")
                 .attr("x", `${e.clientX - 165}`)
-                .attr("y", `${e.clientY + 45}`)
+                .attr("y", `${e.clientY + 45 - 170}`)
                 .text(`Befolkning: ${item.population}`)
                 .style("font-size", "12px")
 
                 hoover
                 .append("text")
                 .attr("x", `${e.clientX - 27}`)
-                .attr("y", `${e.clientY + 35}`)
+                .attr("y", `${e.clientY + 35 - 170}`)
                 .text(`${item.value}%`)
                 .style("font-size", "20px")
 
@@ -78,7 +78,6 @@ let { max, middle, min} = maxNmin
                 .on("mouseover", (e) =>  {
 
                 let hoover = d3.select("svg").append("g").classed("hoverGroupd",true)
-
                 hoover
                 .append("rect")
                 .attr("width", 200)
@@ -86,27 +85,27 @@ let { max, middle, min} = maxNmin
                 .attr("rx", 6) 
                 .attr("ry", 6)
                 .attr("x", `${e.clientX - 170}`)
-                .attr("y", `${e.clientY}`);
+                .attr("y", `${e.clientY - 170}`);
 
-
+    
                 hoover
                 .append("text")
                 .attr("x", `${e.clientX - 165}`)
-                .attr("y", `${e.clientY + 25}`)
+                .attr("y", `${e.clientY + 25 - 170}`)
                 .text(`${item.kommunNamn}`)
                 .style("font-size", "22px")
 
                 hoover
                 .append("text")
                 .attr("x", `${e.clientX - 165}`)
-                .attr("y", `${e.clientY + 45}`)
+                .attr("y", `${e.clientY + 45 - 170}`)
                 .text(`Befolkning: ${item.population}`)
                 .style("font-size", "12px")
 
                 hoover
                 .append("text")
                 .attr("x", `${e.clientX - 27}`)
-                .attr("y", `${e.clientY + 35}`)
+                .attr("y", `${e.clientY + 35 - 170}`)
                 .text(`${item.value}%`)
                 .style("font-size", "20px")
 
