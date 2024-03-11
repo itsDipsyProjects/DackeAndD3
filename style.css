@@ -98,6 +98,7 @@ main{
 #links{
     margin-top: 40px;
     margin-bottom: 60px;
+}
 .selected{
     background-color: blue;
     color: white;
