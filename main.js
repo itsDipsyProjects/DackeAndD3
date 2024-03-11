@@ -1,4 +1,5 @@
 import { formatData } from "./formatData.js"
+import { renderDOM } from "./domEleCreation.js";
 import { getColor } from "./colorize.js";
   
 function createSVG (){
@@ -43,6 +44,7 @@ function createSVG (){
                   .attr("x", rectX + 17) 
                   .attr("y", (d, i) => rectY + i * (legendH / (defaultV.length - 1)) + 5)
                   .text(d => d + "%")
+                  .style("font-weight", "bold")
                   ;       
 
   legend.append("linearGradient")
@@ -176,3 +178,4 @@ export async function getData(dos, agegroup, dataType) {
 }
 
 createSVG()
+renderDOM()

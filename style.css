@@ -11,12 +11,6 @@ body{
     justify-content: center;
 }
 
-.on{
-    background-color: rgb(89, 95, 236);
-    color: white;
-    border-radius: 6px;
-}
-
 body > h1{
     font-size: 50px;
     margin-bottom: 10px;
@@ -28,10 +22,50 @@ body > h1{
     justify-content: center;
 }
 
+
+#links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+a{
+    color: rgb(89, 95, 236);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(50, 24, 69);
+}
+
+
+.intro{
+    
+    font-family: Roboto;
+    font-size: 16px;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+main{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+}
+
+main > p{
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+/* INTERACTIVE PART */
+
+
 .actions{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .options{
@@ -39,11 +73,12 @@ body > h1{
 }
 
 .options > button{
-    width: 140px
+    width: 194px;
+    height: 60px;
+    font-size: 18px;
 }
 
 button {
-
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -73,6 +108,19 @@ button:active {
   transform: translateY(0);
 }
 
+button:disabled {
+     background-color: #F0F0F1;
+}
+
+button:disabled, button:disabled:hover, button:disabled:active{
+    transform: translateY(0px);
+    background-color: #F0F0F1;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    color: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
 .hoverGroupd rect{
     fill: white;
     stroke: black;
@@ -82,47 +130,15 @@ button:active {
     fill: black;
 }
 
-.intro{
-    
-    font-size: 15px;
-    width: 50%;
-    margin-bottom: 50px;
+.on{
+    background-color: rgb(89, 95, 236);
+    color: white;
+    border-radius: 6px;
 }
 
-main{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 50%;
-}
-
-#links{
-    margin-top: 40px;
-    margin-bottom: 60px;
 .selected{
-    background-color: blue;
+   background-color: rgb(89, 95, 236);
     color: white;
-    border: 1px solid gray;
-    border-radius: 2px;
-}
+    border-radius: 6px;
+} 
 
-.selected2{
-    background-color: lightgreen;
-    color: white;
-    border: 1px solid gray;
-    border-radius: 2px;
-}   
-
-h1{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-a{
-    color: rgb(89, 95, 236);
-    text-decoration: none;
-}
-
-a:hover{
-    color: rgb(50, 24, 69);
-}

@@ -6,7 +6,6 @@ export async function getColor(data, dos, maxNmin){
 
 let { max, middle, min} = maxNmin
 
-
     const colorScale = d3.scaleLinear([min, max], ["rgb(89, 95, 236)", "red"])
 
     let colors = [
@@ -93,6 +92,7 @@ let { max, middle, min} = maxNmin
                 .attr("y", `${e.clientY + 25 - 170}`)
                 .text(`${item.kommunNamn}`)
                 .style("font-size", "22px")
+                .style("font-weight", "bold")
 
                 hoover
                 .append("text")

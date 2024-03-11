@@ -5,7 +5,6 @@ export async function formatData(){
   let kommunNamn = await formatKommun()
   
 
-
   let datasetArray = await d3.json("./API/realData.json")
   let dataset = datasetArray.data;  
   
