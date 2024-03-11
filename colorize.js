@@ -7,7 +7,7 @@ export async function getColor(data, dos, maxNmin){
 let { max, middle, min} = maxNmin
 
 
-    const colorScale = d3.scaleLinear([min, max], ["yellow", "darkgreen"])
+    const colorScale = d3.scaleLinear([min, max], ["rgba(89, 95, 236, 1)", "red"])
 
     let colors = [
        { offset: "0", color: colorScale(min)},
