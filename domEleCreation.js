@@ -2,6 +2,13 @@ import { getData } from "./main.js";
 
 let actionsDOM = d3.select("#wrapper").append("div").classed("actions", true);
 
+
+function unselectBtns(){
+    let btn_selected = d3.selectAll("button.selected");
+    btn_selected.classed("selected", false);
+}
+
+
 //actionsDOM.append("h1")
 //.text("Vilken typ av jämförelse du vill göra?")
 
@@ -19,7 +26,10 @@ let headerFirst = domButtonDivFirst.append("h1")
 domButtonDivFirst.selectAll("button").data(buttonData).enter()
 .append("button")
 .text(d => {return d + " år"})
-.on("click", (i, d) => {
+.on("click", (event, d,) => {
+    unselectBtns();
+    event.srcElement.classList.add("selected")
+    
     renderTypeData(d, "firstDos")
 })
 
@@ -33,9 +43,10 @@ let headerSecond = domButtonDivSecond.append("h1")
 domButtonDivSecond.selectAll("button").data(buttonData).enter()
 .append("button")
 .text(d => {return d + " år"})
-.on("click", (i, d) => {
+.on("click", (event, d) => {
+    unselectBtns();
+    event.srcElement.classList.add("selected")
     renderTypeData(d, "latestDos")
-    
 })
 
 
@@ -62,22 +73,28 @@ function renderTypeData(d, dos){
 
 
 function toggleButtonColor(element) {
-    console.log(d3.selectAll(".options button"))
 
-
-    let hasClass = d3.select(element).classed("on");
-
-    if(hasClass){
+    unselectBtns()
    
+    
+    let hasClass = d3.select(element).classed("on");
+    
+    if(hasClass === true){
+        console.log("yes2")
+        d3.select(element).classed("on",false);
         allFilterButtons.attr("disabled", true);
-        return d3.select(element).classed("on", false);
-         
+        let unselectedButton = d3.selectAll(".options button:not(.on)");
+        console.log(unselectedButton)
+        unselectedButton.attr("disabled", null)
+        
     }
-    else {
-
+    if(hasClass === false) {
+        console.log("yes")
         allFilterButtons.attr("disabled", null);
-        return d3.select(element).classed("on", true);
-            
+        d3.select(element).classed("on", true);
+        let unselectedButtons = d3.selectAll(".options button:not(.on)");
+        unselectedButtons.attr("disabled", true)
+    
     }
 
 }
