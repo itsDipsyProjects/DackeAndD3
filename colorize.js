@@ -32,30 +32,30 @@ let { max, middle, min} = maxNmin
                 .attr("height", 55)
                 .attr("rx", 6) 
                 .attr("ry", 6)
-                .attr("x", `${e.clientX - 170}`)
-                .attr("y", `${e.clientY - 170}`);
+                .attr("x", `${e.clientX - 180}`)
+                .attr("y", `${e.clientY - 190}`);
 
     
                 hoover
                 .append("text")
                 .attr("x", `${e.clientX - 165}`)
-                .attr("y", `${e.clientY + 25 - 170}`)
+                .attr("y", `${e.clientY + 25 - 190}`)
                 .text(`${item.kommunNamn}`)
                 .style("font-size", "22px")
 
                 hoover
                 .append("text")
                 .attr("x", `${e.clientX - 165}`)
-                .attr("y", `${e.clientY + 45 - 170}`)
+                .attr("y", `${e.clientY + 45 - 190}`)
                 .text(`Befolkning: ${item.population}`)
                 .style("font-size", "12px")
 
                 hoover
                 .append("text")
-                .attr("x", `${e.clientX - 27}`)
-                .attr("y", `${e.clientY + 35 - 170}`)
+                .attr("x", `${e.clientX - 30}`)
+                .attr("y", `${e.clientY + 35 - 190}`)
                 .text(`${item.value}%`)
-                .style("font-size", "20px")
+                .style("font-size", "15px")
 
 
             })
