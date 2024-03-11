@@ -83,12 +83,12 @@ export function UpdateLegend(maxNmin, color){
 }
 
 export async function getData(dos, agegroup, dataType) {
-  console.log(dataType)
 
   const dataset = await formatData()
   let sendData = [];
   let highestValue = 0;
   let lowestValue = 101;
+  console.log(dataset)
 
     dataset.forEach(data => {
       if (dos === "firstDos") {
@@ -154,7 +154,6 @@ export async function getData(dos, agegroup, dataType) {
       "min": min,
     }
 
-      console.log(maxNmin)
 
     getColor(sendData,"firstDos", maxNmin)
     

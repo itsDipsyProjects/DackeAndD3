@@ -2,9 +2,6 @@ import { getData } from "./main.js";
 
 let actionsDOM = d3.select("#wrapper").append("div").classed("actions", true);
 
-//actionsDOM.append("h1")
-//.text("Vilken typ av jämförelse du vill göra?")
-
 let options = actionsDOM.append("div").classed("options", true)
 
 let buttonData = ["-18", "18-49", "50-64", "65-79"];

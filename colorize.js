@@ -7,7 +7,7 @@ export async function getColor(data, dos, maxNmin){
 let { max, middle, min} = maxNmin
 
 
-    const colorScale = d3.scaleLinear([min, max], ["rgba(89, 95, 236, 1)", "red"])
+    const colorScale = d3.scaleLinear([min, max], ["rgb(89, 95, 236)", "red"])
 
     let colors = [
        { offset: "0", color: colorScale(min)},
@@ -15,7 +15,6 @@ let { max, middle, min} = maxNmin
        { offset: "100%", color: colorScale(max)}
     ]
 
-      console.log(maxNmin)
     let minmax = [max, middle, min]
 
     UpdateLegend(minmax, colors)

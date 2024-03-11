@@ -10,7 +10,7 @@
 
 <body>
 
-  <h1> Covid vaccinations täckning 2024</h1>
+  <h1> Covid vaccinations 2024</h1>
   <div class="intro">
     <p>Denna visualisering berör vaccinationsgrad i Sverige mot covid, och datan är uppdelad efter 290 kommuner, första
       dosen samt den aktuella påfyllnadsdosen. Datan är från 2024 och uppdelad efter procentuell mängd för varje kommun
@@ -646,6 +646,48 @@
       </g>
     </svg>
   </div>
+      <main>
+      <h2>Om datan</h2>
+      <p>De tre datset vi valt att använda oss av kommer från en nationella myndighet och stödjande verksamhet och har därför generellt en hög trovärdighet eftersom verksamheterna inte har en agenda för att förvränga datan, utan behöver förhålla sig objektiva och neutrala.
+Dataset som berör covid vaccinering kommer från Folkhälsomyndigheten, som är en nationell kunskapsmyndighet och har ansvar för att stödja nationell hälsa. Folkhälsomyndigheten har därför jobbat noggrant med covid och dess utveckling i Sverige, och ger rekommendationer gällande påfyllnadsdos baserat på behovsbedömning som vilar på vetenskaplig grund. 
+De senaste rekommendationerna för covid vaccinering för våren 2024 är att personer över 80 år, samt personer över 65 år med daglig omvårdnadsinsatser rekommenderas ta den aktuell påfyllnadsdos, Övriga grupper behöver inte påfyllnadsdos eftersom det redan finns en grupp-immunitet. </p>
+<br>
+
+<p>
+
+För att tydliggöra vår visualisering ville vi ha med befolkningsmäng för varje kommun och namn på kommunen, och dessa två dataset kommer från SCB. SCB (Statistiska Central Byrån) främsta uppgift är att förse kunder i form av myndigheter och regering med statistiskt underlag för beslutsfattande samt samordna system för den officiella statistiken i Sverige. 
+Statistik vi tagit från denna källa är befolkningsmängd (från 2023), samt sammankoppling mellan kommun-Id och kommun namn.
+
+<div id="links">
+  <a href="http://fohm-app.folkhalsomyndigheten.se/Folkhalsodata/pxweb/sv/A_Folkhalsodata/A_Folkhalsodata__L_Vaccin__Covid19/covvaccreg.px/table/tableViewLayout1/">Covid Data</a>
+    <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/befolkning/befolkningens-sammansattning/befolkningsstatistik/pong/tabell-och-diagram/folkmangd-och-befolkningsforandringar---helarsstatistik/folkmangd-i-riket-lan-och-kommuner-31-december-2023-och-befolkningsforandringar-2023/ ">Befolkningsmängd</a>
+  <a href="https://www.scb.se/hitta-statistik/regional-statistik-och-kartor/regionala-indelningar/lan-och-kommuner/lan-och-kommuner-i-kodnummerordning/ ">Kommun ID</a>
+</div>
+</p>
+<h2>Presentation av databearbetning</h2>
+<p>Vi har använt tre dataset som är relevant för att kunna förstå vår datavisualisering. 
+  Dataset berörde vaccinationsgrad mot covid-19, befolkningsmängd, samt namnen för de olika kommunerna. Helst hade man velat ha allt i en och samma json-fil 
+  med detta var inte möjligt så vi omformaterade datan och slog ihop de tre dataseten till en array av objekt, uppdelade i objekt.
+
+Denna formateringen är gjord med hjälp av JavaScript-module som skapar i filen formatData.js. Det fanns alltid en gemensam nämnare 
+i och med att vi jobbade med kommuner så det vi gjorde var att skapa en ny array med objekt som innehöll kommun ID, kommun namn, 
+befolkningsmängd samt två arrayer bestående av vaccinations objekten som vi behövde för att kunna sammanställa vår visualisering. Dessa objeket
+fanns som instanser av alla kommuner i Sverige, det vill säga 290 stycken objekt. När de sedan används för visualiseringen
+ hämtas även det högsta och lägsta värdet för varje åldersgrupp, som sedan sparas i ett objekt och används vid relativa jämförelser i visualiseringen.
+</p>
+<h2>Diskussion av lärdomar inom projektet</h2>
+<p>Det vi främst kommer ta med oss från detta projekt är erfarenhet av att arbeta med D3 och i förlängningen hur vi kan använda oss av externa bibliotek. 
+  Det har varit en viktig lärdom för att man måste förstå ett annat tankesätt än bara native JavaScript och dess inbyggda API:er, 
+  man har behövt fördjupa sig i dokumentation när vi varit osäkra för att förstå hur verktygen fungerar, samt felsöka på ett annat sätt än tidigare. 
+
+Ytterligare en lärdom som vi har funnit i arbetet med projektet är hur man arbetar med olika dataset och kopplar samman dem till ett dataset. 
+Det var inte direkt en självklarhet hur man skulle förstå den data vi hade hittat samt koppla relevans till projektet i sin helhet, 
+vi fick vara kreativ och modifiera lösningar och dataset utifrån det vi saknade under arbetets gång 
+därför var det även väldigt viktigt att vara öppen för förändring då man insåg att det fanns flera sätt att visualisera en viss data på. 
+</p>
+ 
+    </main>
+
 
     <script src="./d3Lib.js"></script>
     <script type="module" src="./domEleCreation.js"></script>
