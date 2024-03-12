@@ -1,5 +1,5 @@
 import { formatData } from "./formatData.js"
-import { renderDOM } from "./domEleCreation.js";
+import { renderDOM   } from "./domEleCreation.js";
 import { getColor } from "./colorize.js";
   
 function createSVG (){
@@ -9,10 +9,11 @@ function createSVG (){
   const rectY = 150;
   const rectX = 330;
   
-  let svg = d3.select("svg")
+  let svg = d3.select("svg");
 
   let legend = svg.append("g")
-                  .classed("gradient", true);
+                  .classed("gradient", true)
+                  ;
 
   let rectLegend = legend
                   .append("rect")
@@ -90,7 +91,6 @@ export async function getData(dos, agegroup, dataType) {
   let sendData = [];
   let highestValue = 0;
   let lowestValue = 101;
-  console.log(dataset)
 
     dataset.forEach(data => {
       if (dos === "firstDos") {
@@ -126,11 +126,11 @@ export async function getData(dos, agegroup, dataType) {
             if(dataType === "Absolut"){
               highestValue = 100;
               lowestValue = 0;
+
             } else {
               highestValue = Math.max(highestValue, value.value);
               lowestValue = Math.min(lowestValue, value.value);
             }
-
 
             let Data = {
               "id": data.id,
@@ -157,7 +157,7 @@ export async function getData(dos, agegroup, dataType) {
     }
 
 
-    getColor(sendData,"firstDos", maxNmin)
+    getColor(sendData,"firstDos", maxNmin);
     
   }
 
@@ -173,7 +173,7 @@ export async function getData(dos, agegroup, dataType) {
         "min": min,   
     }
 
-    getColor(sendData,"latestDos", maxNmin)
+    getColor(sendData,"latestDos", maxNmin);
   }
 }
 

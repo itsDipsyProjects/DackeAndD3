@@ -3,12 +3,13 @@ import { getData } from "./main.js";
 export function renderDOM(){
 
     let actionsDOM = d3.select("#wrapper").append("div").classed("actions", true);
-    let options = actionsDOM.append("div").classed("options", true)
+    let options = actionsDOM.append("div").classed("options", true);
+
     let choiceHeader = options.append("h2")
     .text("Välj typ av visualisering")
 
     let optionsContainer = options.append("div").classed("optionsContainer", true)
-    let filters = actionsDOM.append("div").classed("filters", true)
+    let filters = actionsDOM.append("div").classed("filters", true);
 
     let buttonData = ["-18", "18-49", "50-64", "65-79"];
     let domButtonDivFirst = filters.append("div")
@@ -32,10 +33,12 @@ export function renderDOM(){
 
     let domButtonDivSecond = filters.append("div")
     .classed("divForButtonsSecond", true)
+    ;
 
     let headerSecond = domButtonDivSecond.append("h2")
     .text("Aktuell påfyllnadsdos")
     ;
+
     domButtonDivSecond.selectAll("button").data(buttonData).enter()
     .append("button")
     .text(d => {return d + " år"})
@@ -58,7 +61,8 @@ export function renderDOM(){
             .text( d => {return d})
             .on("click", function () {
                 toggleButtonColor(this)
-            });
+            })
+            ;
 
 
     function toggleButtonColor(element) {

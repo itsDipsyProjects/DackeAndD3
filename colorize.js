@@ -6,19 +6,18 @@ export async function getColor(data, dos, maxNmin){
 
 let { max, middle, min} = maxNmin
 
-    const colorScale = d3.scaleLinear([min, max], ["rgb(89, 95, 236)", "red"])
+    const colorScale = d3.scaleLinear([min, max], ["rgb(89, 95, 236)", "red"]);
 
     let colors = [
        { offset: "0", color: colorScale(min)},
        { offset: "50%", color: colorScale(middle)},
        { offset: "100%", color: colorScale(max)}
-    ]
+    ];
 
-    let minmax = [max, middle, min]
+    let minmax = [max, middle, min];
 
     UpdateLegend(minmax, colors)
     
-
     if(dos === "firstDos"){
         data.forEach((item, i) => {
             const node = d3.select(`#x${item.id}`)
@@ -32,7 +31,8 @@ let { max, middle, min} = maxNmin
                 .attr("rx", 6) 
                 .attr("ry", 6)
                 .attr("x", `${e.clientX - 180}`)
-                .attr("y", `${e.clientY - 190}`);
+                .attr("y", `${e.clientY - 190}`)
+                ;
 
     
                 hoover
@@ -41,6 +41,7 @@ let { max, middle, min} = maxNmin
                 .attr("y", `${e.clientY + 25 - 190}`)
                 .text(`${item.kommunNamn}`)
                 .style("font-size", "22px")
+                ;
 
                 hoover
                 .append("text")
@@ -48,6 +49,7 @@ let { max, middle, min} = maxNmin
                 .attr("y", `${e.clientY + 45 - 190}`)
                 .text(`Befolkning: ${item.population}`)
                 .style("font-size", "12px")
+                ;
 
                 hoover
                 .append("text")
@@ -55,6 +57,7 @@ let { max, middle, min} = maxNmin
                 .attr("y", `${e.clientY + 35 - 190}`)
                 .text(`${item.value}%`)
                 .style("font-size", "15px")
+                ;
 
 
             })
@@ -83,7 +86,8 @@ let { max, middle, min} = maxNmin
                 .attr("rx", 6) 
                 .attr("ry", 6)
                 .attr("x", `${e.clientX - 170}`)
-                .attr("y", `${e.clientY - 170}`);
+                .attr("y", `${e.clientY - 170}`)
+                ;
 
     
                 hoover
@@ -93,6 +97,7 @@ let { max, middle, min} = maxNmin
                 .text(`${item.kommunNamn}`)
                 .style("font-size", "22px")
                 .style("font-weight", "bold")
+                ;
 
                 hoover
                 .append("text")
@@ -100,6 +105,7 @@ let { max, middle, min} = maxNmin
                 .attr("y", `${e.clientY + 45 - 170}`)
                 .text(`Befolkning: ${item.population}`)
                 .style("font-size", "12px")
+                ;
 
                 hoover
                 .append("text")
@@ -107,6 +113,7 @@ let { max, middle, min} = maxNmin
                 .attr("y", `${e.clientY + 35 - 170}`)
                 .text(`${item.value}%`)
                 .style("font-size", "20px")
+                ;
 
 
             })
