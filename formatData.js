@@ -1,9 +1,6 @@
 
 export async function formatData(){
 
-  let population = await formatPopulation();
-  let kommunNamn = await formatKommun();
-
   let datasetArray = await d3.json("./API/realData.json")
   let dataset = datasetArray.data;  
   
@@ -57,10 +54,14 @@ export async function formatData(){
   }
 
   for (let k = 0; k < sendData.length; k++) {
-    let sendDataInstance = sendData[k];
-    sendDataInstance.population = population[k].value
-    sendDataInstance.kommunNamn = kommunNamn[k].kommunNamn
+    let areaKommun = await formatKommun();
+    let populationData = await formatPopulation();
+    let instance = sendData[k];
+
+    instance.kommunNamn = areaKommun.find(node => node.kommunId === instance.id).kommunNamn
+    instance.population = populationData.find(node => node.kommun === instance.id).value
   }
+
   sendData.reverse()
   return sendData;
 }
