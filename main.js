@@ -14,7 +14,6 @@ function createSVG (){
   let legend = svg.append("g")
                   .classed("gradient", true)
                   ;
-
   let rectLegend = legend
                   .append("rect")
                   .classed("legend", true)
