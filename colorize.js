@@ -41,6 +41,7 @@ let { max, middle, min} = maxNmin
                 .attr("y", `${e.clientY + 25 - 190}`)
                 .text(`${item.kommunNamn}`)
                 .style("font-size", "22px")
+                .style("font-weight", "bold")
                 ;
 
                 hoover
@@ -53,10 +54,10 @@ let { max, middle, min} = maxNmin
 
                 hoover
                 .append("text")
-                .attr("x", `${e.clientX - 30}`)
+                .attr("x", `${e.clientX - 27}`)
                 .attr("y", `${e.clientY + 35 - 190}`)
                 .text(`${item.value}%`)
-                .style("font-size", "15px")
+                .style("font-size", "20px")
                 ;
 
 
